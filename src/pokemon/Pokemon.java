@@ -3,7 +3,7 @@ package pokemon;
 public class Pokemon {
 	protected int max_hp;
 	protected int Attack;
-	protected int Defense;
+	protected int defense;
 	protected int spAtk;
 	protected int SpDef;
 	protected int Speed;
@@ -23,7 +23,7 @@ public class Pokemon {
 	}
 
 	public int getdefense() {
-		return Defense;
+		return defense;
 	}
 
 	public int getspdef() {
