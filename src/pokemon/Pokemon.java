@@ -1,12 +1,10 @@
 package pokemon;
 
-import pokemon.Pokemon.Type;
-
 public class Pokemon {
 	protected int max_hp;
 	protected int Attack;
 	protected int Defense;
-	protected int SpAtk;
+	protected int spAtk;
 	protected int SpDef;
 	protected int Speed;
 
@@ -33,7 +31,7 @@ public class Pokemon {
 	}
 
 	public int getspatk() {
-		return SpAtk;
+		return spAtk;
 	}
 
 	public int getspeed() {
