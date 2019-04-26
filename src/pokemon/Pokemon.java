@@ -1,34 +1,64 @@
 package pokemon;
 
-interface Pokemon {
+class Pokemon {
 	static enum Type {
 		NORMAL, FIGHT, FLYING, POISON, GROUND, ROCK, BUG, GHOST, FIRE, WATER, GRASS, ELECTR, PSYCHC, ICE, DRAGON
 	}
 
-	public int getID();
+	int id, maxHP, attack, defense, spAtk, spDef, speed;
+	Type type1, type2;
 
-	public int getMaxHP();
+	public int getID() {
+		return id;
+	}
 
-	public int getAttack();
+	public int getMaxHP() {
+		return maxHP;
+	}
 
-	public int getDefense();
+	public int getAttack() {
+		return attack;
+	}
 
-	public int getSpDef();
+	public int getDefense() {
+		return defense;
+	}
 
-	public int getSpAtk();
+	public int getSpDef() {
+		return spDef;
+	}
 
-	public int getSpeed();
+	public int getSpAtk() {
+		return spAtk;
+	}
 
-	public String getType1();
+	public int getSpeed() {
+		return speed;
+	}
 
-	public String getType2();
+	public String getType1() {
+		return type1.toString();
+	}
 
-	public String getName();
+	public String getType2() {
+		return type2.toString();
+	}
+
+	public String getName() {
+		String str = this.getClass().getName();
+		str = str.replace("pokemon.", "");
+		return str;
+	}
 
 	public static void main(String[] args) {
-		Pokemon pkmn = new Bulbasaur();
-		System.out.println(pkmn.getMaxHP());
-		System.out.println(pkmn.getSpeed());
+		Pokemon pkmn1 = new Bulbasaur();
+		Pokemon pkmn2 = new Blastoise();
+		System.out.println(pkmn1.getName());
+		System.out.println(pkmn1.getMaxHP());
+		System.out.println(pkmn1.getSpeed());
+		System.out.println(pkmn2.getName());
+		System.out.println(pkmn2.getMaxHP());
+		System.out.println(pkmn2.getSpeed());
 	}
 
 }

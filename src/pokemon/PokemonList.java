@@ -1,577 +1,586 @@
 package pokemon;
 
-class Bulbasaur implements Pokemon {
-	static final int id = 1, maxHP = 294, attack = 216, defense = 216, spAtk = 251, spDef = 251, speed = 207;
-	static final Type type1 = Type.GRASS, type2 = Type.POISON;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class MissingNo extends Pokemon {
+	public MissingNo() {
+		id = 0;
+		maxHP = 269;
+		attack = 370;
+		defense = 98;
+		spAtk = 110;
+		spDef = 110;
+		speed = 156;
+		type1 = Type.FLYING;
+		type2 = Type.NORMAL;
 	}
 
 }
 
-class Ivysaur implements Pokemon {
-	static final int id = 2, maxHP = 324, attack = 245, defense = 247, spAtk = 284, spDef = 284, speed = 240;
-	static final Type type1 = Type.POISON, type2 = Type.GRASS;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Bulbasaur extends Pokemon {
+	public Bulbasaur() {
+		id = 1;
+		maxHP = 294;
+		attack = 216;
+		defense = 216;
+		spAtk = 251;
+		spDef = 251;
+		speed = 207;
+		type1 = Type.GRASS;
+		type2 = Type.POISON;
 	}
 
 }
 
-class Venusaur implements Pokemon {
-	static final int id = 3, maxHP = 364, attack = 289, defense = 291, spAtk = 328, spDef = 328, speed = 284;
-	static final Type type1 = Type.GRASS, type2 = Type.POISON;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Ivysaur extends Pokemon {
+	public Ivysaur() {
+		id = 2;
+		maxHP = 324;
+		attack = 245;
+		defense = 247;
+		spAtk = 284;
+		spDef = 284;
+		speed = 240;
+		type1 = Type.POISON;
+		type2 = Type.GRASS;
 	}
 
 }
 
-class Charmander implements Pokemon {
-	static final int id = 4, maxHP = 282, attack = 223, defense = 203, spAtk = 240, spDef = 218, speed = 251;
-	static final Type type1 = Type.FIRE, type2 = Type.FIRE;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Venusaur extends Pokemon {
+	public Venusaur() {
+		id = 3;
+		maxHP = 364;
+		attack = 289;
+		defense = 291;
+		spAtk = 328;
+		spDef = 328;
+		speed = 284;
+		type1 = Type.GRASS;
+		type2 = Type.POISON;
 	}
 
 }
 
-class Charmeleon implements Pokemon {
-	static final int id = 5, maxHP = 320, attack = 249, defense = 236, spAtk = 284, spDef = 251, speed = 284;
-	static final Type type1 = Type.FIRE, type2 = Type.FIRE;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Charmander extends Pokemon {
+	public Charmander() {
+		id = 4;
+		maxHP = 282;
+		attack = 223;
+		defense = 203;
+		spAtk = 240;
+		spDef = 218;
+		speed = 251;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
 	}
 
 }
 
-class Charizard implements Pokemon {
-	static final int id = 6, maxHP = 360, attack = 293, defense = 280, spAtk = 348, spDef = 295, speed = 328;
-	static final Type type1 = Type.FIRE, type2 = Type.FLYING;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Charmeleon extends Pokemon {
+	public Charmeleon() {
+		id = 5;
+		maxHP = 320;
+		attack = 249;
+		defense = 236;
+		spAtk = 284;
+		spDef = 251;
+		speed = 284;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
 	}
 
 }
 
-class Squirtle implements Pokemon {
-	static final int id = 7, maxHP = 292, attack = 214, defense = 251, spAtk = 218, spDef = 249, speed = 203;
-	static final Type type1 = Type.WATER, type2 = Type.WATER;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Charizard extends Pokemon {
+	public Charizard() {
+		id = 6;
+		maxHP = 360;
+		attack = 293;
+		defense = 280;
+		spAtk = 348;
+		spDef = 295;
+		speed = 328;
+		type1 = Type.FIRE;
+		type2 = Type.FLYING;
 	}
 
 }
 
-class Wartortle implements Pokemon {
-	static final int id = 8, maxHP = 322, attack = 247, defense = 284, spAtk = 251, spDef = 284, speed = 236;
-	static final Type type1 = Type.WATER, type2 = Type.WATER;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Squirtle extends Pokemon {
+	public Squirtle() {
+		id = 7;
+		maxHP = 292;
+		attack = 214;
+		defense = 251;
+		spAtk = 218;
+		spDef = 249;
+		speed = 203;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
 	}
 
 }
 
-class Blastoise implements Pokemon {
-	static final int id = 9, maxHP = 362, attack = 291, defense = 328, spAtk = 295, spDef = 339, speed = 280;
-	static final Type type1 = Type.BUG, type2 = Type.WATER;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Wartortle extends Pokemon {
+	public Wartortle() {
+		id = 8;
+		maxHP = 322;
+		attack = 247;
+		defense = 284;
+		spAtk = 251;
+		spDef = 284;
+		speed = 236;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
 	}
 
 }
 
-class Caterpie implements Pokemon {
-	static final int id = 10, maxHP = 294, attack = 174, defense = 185, spAtk = 152, spDef = 152, speed = 207;
-	static final Type type1 = Type.BUG, type2 = Type.BUG;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Blastoise extends Pokemon {
+	public Blastoise() {
+		id = 9;
+		maxHP = 362;
+		attack = 291;
+		defense = 328;
+		spAtk = 295;
+		spDef = 339;
+		speed = 280;
+		type1 = Type.BUG;
+		type2 = Type.WATER;
 	}
 
 }
 
-class Metapod implements Pokemon {
-	static final int id = 11, maxHP = 304, attack = 152, defense = 229, spAtk = 163, spDef = 163, speed = 174;
-	static final Type type1 = Type.BUG, type2 = Type.BUG;
-
-	public int getID() {
-		return id;
-	}
-
-	public int getMaxHP() {
-		return maxHP;
-	}
-
-	public int getAttack() {
-		return attack;
-	}
-
-	public int getDefense() {
-		return defense;
-	}
-
-	public int getSpDef() {
-		return spDef;
-	}
-
-	public int getSpAtk() {
-		return spAtk;
-	}
-
-	public int getSpeed() {
-		return speed;
-	}
-
-	public String getType1() {
-		return type1.toString();
-	}
-
-	public String getType2() {
-		return type2.toString();
-	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+class Caterpie extends Pokemon {
+	public Caterpie() {
+		id = 10;
+		maxHP = 294;
+		attack = 174;
+		defense = 185;
+		spAtk = 152;
+		spDef = 152;
+		speed = 207;
+		type1 = Type.BUG;
+		type2 = Type.BUG;
 	}
 
 }
 
-class Butterfree implements Pokemon {
-	static final int id = 12, maxHP = 324, attack = 207, defense = 218, spAtk = 284, spDef = 284, speed = 262;
-	static final Type type1 = Type.BUG, type2 = Type.FLYING;
-
-	public int getID() {
-		return id;
+class Metapod extends Pokemon {
+	public Metapod() {
+		id = 11;
+		maxHP = 304;
+		attack = 152;
+		defense = 229;
+		spAtk = 163;
+		spDef = 163;
+		speed = 174;
+		type1 = Type.BUG;
+		type2 = Type.BUG;
 	}
 
-	public int getMaxHP() {
-		return maxHP;
+}
+
+class Butterfree extends Pokemon {
+	public Butterfree() {
+		id = 12;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public int getAttack() {
-		return attack;
+}
+
+class a extends Pokemon {
+	public a() {
+		id = 13;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public int getDefense() {
-		return defense;
+}
+
+class b extends Pokemon {
+	public b() {
+		id = 14;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public int getSpDef() {
-		return spDef;
+}
+
+class c extends Pokemon {
+	public c() {
+		id = 15;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public int getSpAtk() {
-		return spAtk;
+}
+
+class d extends Pokemon {
+	public d() {
+		id = 16;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public int getSpeed() {
-		return speed;
+}
+
+class e extends Pokemon {
+	public e() {
+		id = 17;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public String getType1() {
-		return type1.toString();
+}
+
+class f extends Pokemon {
+	public f() {
+		id = 18;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public String getType2() {
-		return type2.toString();
+}
+
+class g extends Pokemon {
+	public g() {
+		id = 19;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
-		return str;
+}
+
+class h extends Pokemon {
+	public h() {
+		id = 20;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class i extends Pokemon {
+	public i() {
+		id = 21;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class j extends Pokemon {
+	public j() {
+		id = 22;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class k extends Pokemon {
+	public k() {
+		id = 23;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class l extends Pokemon {
+	public l() {
+		id = 24;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class m extends Pokemon {
+	public m() {
+		id = 25;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class n extends Pokemon {
+	public n() {
+		id = 26;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class o extends Pokemon {
+	public o() {
+		id = 27;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class p extends Pokemon {
+	public p() {
+		id = 28;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class q extends Pokemon {
+	public q() {
+		id = 29;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class r extends Pokemon {
+	public r() {
+		id = 30;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class s extends Pokemon {
+	public s() {
+		id = 31;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class t extends Pokemon {
+	public t() {
+		id = 32;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class u extends Pokemon {
+	public u() {
+		id = 33;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class v extends Pokemon {
+	public v() {
+		id = 34;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class w extends Pokemon {
+	public w() {
+		id = 35;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class x extends Pokemon {
+	public x() {
+		id = 36;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class y extends Pokemon {
+	public y() {
+		id = 37;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
+	}
+
+}
+
+class z extends Pokemon {
+	public z() {
+		id = 38;
+		maxHP = 324;
+		attack = 207;
+		defense = 218;
+		spAtk = 284;
+		spDef = 284;
+		speed = 262;
+		type1 = Type.BUG;
+		type2 = Type.FLYING;
 	}
 
 }
