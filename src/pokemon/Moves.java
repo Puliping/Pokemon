@@ -10,8 +10,8 @@ class Pound extends Attack{
 }
 class KarateChop extends Attack{
 	public KarateChop() {
-		int power = 40;
-		int type = 50;
+		int power = 50;
+		int type = 2;
 		int category = 1;
 	}
 }

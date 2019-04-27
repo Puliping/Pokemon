@@ -1,9 +1,6 @@
 package pokemon;
 
 public class Attack {
-	static enum Type {
-		NORMAL, FIGHT, FLYING, POISON, GROUND, ROCK, BUG, GHOST, FIRE, WATER, GRASS, ELECTR, PSYCHC, ICE, DRAGON
-	}
 
 	static final public double table_types[][] = { 
 			{ 1,   1,   1,   1,   1, 0.5,   1,   0,   1,   1,   1,   1,   1,   1,   1 },
