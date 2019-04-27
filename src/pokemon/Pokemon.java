@@ -5,9 +5,9 @@ class Pokemon {
 		NORMAL, FIGHT, FLYING, POISON, GROUND, ROCK, BUG, GHOST, FIRE, WATER, GRASS, ELECTR, PSYCHC, ICE, DRAGON
 	}
 
-	protected int id, hp, maxHP, attack, defense, spAtk, spDef, speed;
-	protected Type type1, type2;
-
+	int id, hp, maxHP, attack, defense, spAtk, spDef, speed;
+	Type type1, type2;
+	
 	public int getID() {
 		return id;
 	}
