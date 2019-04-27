@@ -3,7 +3,7 @@ package pokemon;
 class MissingNo extends Pokemon {
 	public MissingNo() {
 		id = 0;
-		maxHP = 269;
+		hp = maxHP = 269;
 		attack = 370;
 		defense = 98;
 		spAtk = 110;
@@ -18,7 +18,7 @@ class MissingNo extends Pokemon {
 class Bulbasaur extends Pokemon {
 	public Bulbasaur() {
 		id = 1;
-		maxHP = 294;
+		hp = maxHP = 294;
 		attack = 216;
 		defense = 216;
 		spAtk = 251;
@@ -33,7 +33,7 @@ class Bulbasaur extends Pokemon {
 class Ivysaur extends Pokemon {
 	public Ivysaur() {
 		id = 2;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 245;
 		defense = 247;
 		spAtk = 284;
@@ -48,7 +48,7 @@ class Ivysaur extends Pokemon {
 class Venusaur extends Pokemon {
 	public Venusaur() {
 		id = 3;
-		maxHP = 364;
+		hp = maxHP = 364;
 		attack = 289;
 		defense = 291;
 		spAtk = 328;
@@ -63,7 +63,7 @@ class Venusaur extends Pokemon {
 class Charmander extends Pokemon {
 	public Charmander() {
 		id = 4;
-		maxHP = 282;
+		hp = maxHP = 282;
 		attack = 223;
 		defense = 203;
 		spAtk = 240;
@@ -78,7 +78,7 @@ class Charmander extends Pokemon {
 class Charmeleon extends Pokemon {
 	public Charmeleon() {
 		id = 5;
-		maxHP = 320;
+		hp = maxHP = 320;
 		attack = 249;
 		defense = 236;
 		spAtk = 284;
@@ -93,7 +93,7 @@ class Charmeleon extends Pokemon {
 class Charizard extends Pokemon {
 	public Charizard() {
 		id = 6;
-		maxHP = 360;
+		hp = maxHP = 360;
 		attack = 293;
 		defense = 280;
 		spAtk = 348;
@@ -108,7 +108,7 @@ class Charizard extends Pokemon {
 class Squirtle extends Pokemon {
 	public Squirtle() {
 		id = 7;
-		maxHP = 292;
+		hp = maxHP = 292;
 		attack = 214;
 		defense = 251;
 		spAtk = 218;
@@ -123,7 +123,7 @@ class Squirtle extends Pokemon {
 class Wartortle extends Pokemon {
 	public Wartortle() {
 		id = 8;
-		maxHP = 322;
+		hp = maxHP = 322;
 		attack = 247;
 		defense = 284;
 		spAtk = 251;
@@ -138,7 +138,7 @@ class Wartortle extends Pokemon {
 class Blastoise extends Pokemon {
 	public Blastoise() {
 		id = 9;
-		maxHP = 362;
+		hp = maxHP = 362;
 		attack = 291;
 		defense = 328;
 		spAtk = 295;
@@ -153,7 +153,7 @@ class Blastoise extends Pokemon {
 class Caterpie extends Pokemon {
 	public Caterpie() {
 		id = 10;
-		maxHP = 294;
+		hp = maxHP = 294;
 		attack = 174;
 		defense = 185;
 		spAtk = 152;
@@ -168,7 +168,7 @@ class Caterpie extends Pokemon {
 class Metapod extends Pokemon {
 	public Metapod() {
 		id = 11;
-		maxHP = 304;
+		hp = maxHP = 304;
 		attack = 152;
 		defense = 229;
 		spAtk = 163;
@@ -183,7 +183,7 @@ class Metapod extends Pokemon {
 class Butterfree extends Pokemon {
 	public Butterfree() {
 		id = 12;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -198,7 +198,7 @@ class Butterfree extends Pokemon {
 class a extends Pokemon {
 	public a() {
 		id = 13;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -213,7 +213,7 @@ class a extends Pokemon {
 class b extends Pokemon {
 	public b() {
 		id = 14;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -228,7 +228,7 @@ class b extends Pokemon {
 class c extends Pokemon {
 	public c() {
 		id = 15;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -243,7 +243,7 @@ class c extends Pokemon {
 class d extends Pokemon {
 	public d() {
 		id = 16;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -258,7 +258,7 @@ class d extends Pokemon {
 class e extends Pokemon {
 	public e() {
 		id = 17;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -273,7 +273,7 @@ class e extends Pokemon {
 class f extends Pokemon {
 	public f() {
 		id = 18;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -288,7 +288,7 @@ class f extends Pokemon {
 class g extends Pokemon {
 	public g() {
 		id = 19;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -303,7 +303,7 @@ class g extends Pokemon {
 class h extends Pokemon {
 	public h() {
 		id = 20;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -318,7 +318,7 @@ class h extends Pokemon {
 class i extends Pokemon {
 	public i() {
 		id = 21;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -333,7 +333,7 @@ class i extends Pokemon {
 class j extends Pokemon {
 	public j() {
 		id = 22;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -348,7 +348,7 @@ class j extends Pokemon {
 class k extends Pokemon {
 	public k() {
 		id = 23;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -363,7 +363,7 @@ class k extends Pokemon {
 class l extends Pokemon {
 	public l() {
 		id = 24;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -378,7 +378,7 @@ class l extends Pokemon {
 class m extends Pokemon {
 	public m() {
 		id = 25;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -393,7 +393,7 @@ class m extends Pokemon {
 class n extends Pokemon {
 	public n() {
 		id = 26;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -408,7 +408,7 @@ class n extends Pokemon {
 class o extends Pokemon {
 	public o() {
 		id = 27;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -423,7 +423,7 @@ class o extends Pokemon {
 class p extends Pokemon {
 	public p() {
 		id = 28;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -438,7 +438,7 @@ class p extends Pokemon {
 class q extends Pokemon {
 	public q() {
 		id = 29;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -453,7 +453,7 @@ class q extends Pokemon {
 class r extends Pokemon {
 	public r() {
 		id = 30;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -468,7 +468,7 @@ class r extends Pokemon {
 class s extends Pokemon {
 	public s() {
 		id = 31;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -483,7 +483,7 @@ class s extends Pokemon {
 class t extends Pokemon {
 	public t() {
 		id = 32;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -498,7 +498,7 @@ class t extends Pokemon {
 class u extends Pokemon {
 	public u() {
 		id = 33;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -513,7 +513,7 @@ class u extends Pokemon {
 class v extends Pokemon {
 	public v() {
 		id = 34;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -528,7 +528,7 @@ class v extends Pokemon {
 class w extends Pokemon {
 	public w() {
 		id = 35;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -543,7 +543,7 @@ class w extends Pokemon {
 class x extends Pokemon {
 	public x() {
 		id = 36;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -558,7 +558,7 @@ class x extends Pokemon {
 class y extends Pokemon {
 	public y() {
 		id = 37;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
@@ -573,7 +573,7 @@ class y extends Pokemon {
 class z extends Pokemon {
 	public z() {
 		id = 38;
-		maxHP = 324;
+		hp = maxHP = 324;
 		attack = 207;
 		defense = 218;
 		spAtk = 284;
