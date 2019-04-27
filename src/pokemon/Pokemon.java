@@ -7,6 +7,7 @@ class Pokemon {
 
 	protected int id, hp, maxHP, attack, defense, spAtk, spDef, speed;
 	protected Type type1, type2;
+	protected Attack move1,move2,move3,move4;
 	
 	public int getID() {
 		return id;
