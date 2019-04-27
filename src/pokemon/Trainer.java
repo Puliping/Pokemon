@@ -52,6 +52,30 @@ public class Trainer {
 		case 12:
 			pkmn = new Butterfree();
 			break;
+		case 13:
+			pkmn = new Weedle();
+			break;
+		case 14:
+			pkmn = new Kakuna();
+			break;
+		case 15:
+			pkmn = new Beedrill();
+			break;
+		case 16:
+			pkmn = new Pidgey();
+			break;
+		case 17:
+			pkmn = new Pidgeotto();
+			break;
+		case 18:
+			pkmn = new Pidgeot();
+			break;
+		case 19:
+			pkmn = new Ratata();
+			break;
+		case 20:
+			pkmn = new Raticate();
+			break;
 		}
 		return pkmn;
 	}
@@ -103,5 +127,6 @@ public class Trainer {
 		trnr.addToTeam(6);
 		System.out.println(trnr);
 		System.out.println(trnr.getTeam());
+		System.out.println(trnr.team.get(0).move1);
 	}
 }
