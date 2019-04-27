@@ -43,20 +43,21 @@ class Pokemon {
 	public String getType2() {
 		return type2.toString();
 	}
-
-	public String getName() {
-		String str = this.getClass().getName();
-		str = str.replace("pokemon.", "");
+	
+	@Override
+	public String toString() {
+		String str = this.getClass().getSimpleName();
+		str = str.replace("_", " ");
 		return str;
 	}
 
 	public static void main(String[] args) {
 		Pokemon pkmn1 = new Bulbasaur();
 		Pokemon pkmn2 = new Blastoise();
-		System.out.println(pkmn1.getName());
+		System.out.println(pkmn1);
 		System.out.println(pkmn1.getMaxHP());
 		System.out.println(pkmn1.getSpeed());
-		System.out.println(pkmn2.getName());
+		System.out.println(pkmn2);
 		System.out.println(pkmn2.getMaxHP());
 		System.out.println(pkmn2.getSpeed());
 	}
