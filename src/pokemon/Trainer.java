@@ -63,7 +63,7 @@ public class Trainer {
 	}
 
 	public void setAttack(Pokemon pkmn,int num, String name) {
-		Attack move = null;
+		Move move = null;
 		switch (name) {
 		case "Pound":
 			move = new Pound();

@@ -1,14 +1,14 @@
 package pokemon;
 
 
-class Pound extends Attack{
+class Pound extends Move{
 	public Pound() {
 		int power = 40;
 		int type = 1;
 		int category = 1;
 	}
 }
-class KarateChop extends Attack{
+class KarateChop extends Move{
 	public KarateChop() {
 		int power = 50;
 		int type = 2;
