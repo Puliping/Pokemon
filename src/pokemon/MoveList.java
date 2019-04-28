@@ -1,17 +1,17 @@
 package pokemon;
 
+import pokemon.Pokemon.Type;
 
-class Pound extends Move{
+class Pound extends Move {
 	public Pound() {
-		int power = 40;
-		int type = 1;
-		int category = 1;
+		power = 40;
+		type = Type.NORMAL;
 	}
 }
-class KarateChop extends Move{
-	public KarateChop() {
-		int power = 50;
-		int type = 2;
-		int category = 1;
+
+class Karate_Chop extends Move {
+	public Karate_Chop() {
+		power = 50;
+		type = Type.FIGHT;
 	}
 }
