@@ -12,7 +12,7 @@ class MissingNo extends Pokemon {
 		type1 = Type.FLYING;
 		type2 = Type.NORMAL;
 	}
-
+	
 }
 
 class Bulbasaur extends Pokemon {
@@ -27,7 +27,7 @@ class Bulbasaur extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-
+	
 }
 
 class Ivysaur extends Pokemon {
@@ -42,7 +42,7 @@ class Ivysaur extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.GRASS;
 	}
-
+	
 }
 
 class Venusaur extends Pokemon {
@@ -57,7 +57,7 @@ class Venusaur extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-
+	
 }
 
 class Charmander extends Pokemon {
@@ -72,7 +72,7 @@ class Charmander extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-
+	
 }
 
 class Charmeleon extends Pokemon {
@@ -87,7 +87,7 @@ class Charmeleon extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-
+	
 }
 
 class Charizard extends Pokemon {
@@ -102,7 +102,7 @@ class Charizard extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class Squirtle extends Pokemon {
@@ -117,7 +117,7 @@ class Squirtle extends Pokemon {
 		type1 = Type.WATER;
 		type2 = Type.WATER;
 	}
-
+	
 }
 
 class Wartortle extends Pokemon {
@@ -132,7 +132,7 @@ class Wartortle extends Pokemon {
 		type1 = Type.WATER;
 		type2 = Type.WATER;
 	}
-
+	
 }
 
 class Blastoise extends Pokemon {
@@ -147,7 +147,7 @@ class Blastoise extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.WATER;
 	}
-
+	
 }
 
 class Caterpie extends Pokemon {
@@ -162,7 +162,7 @@ class Caterpie extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.BUG;
 	}
-
+	
 }
 
 class Metapod extends Pokemon {
@@ -177,7 +177,7 @@ class Metapod extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.BUG;
 	}
-
+	
 }
 
 class Butterfree extends Pokemon {
@@ -192,8 +192,9 @@ class Butterfree extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
+
 class Weedle extends Pokemon {
 	public Weedle() {
 		id = 13;
@@ -206,7 +207,7 @@ class Weedle extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-
+	
 }
 
 class Kakuna extends Pokemon {
@@ -221,7 +222,7 @@ class Kakuna extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-
+	
 }
 
 class Beedrill extends Pokemon {
@@ -236,10 +237,10 @@ class Beedrill extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-
+	
 }
 
-class Pidgey  extends Pokemon {
+class Pidgey extends Pokemon {
 	public Pidgey() {
 		id = 16;
 		hp = maxHP = 284;
@@ -251,7 +252,7 @@ class Pidgey  extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class Pidgeotto extends Pokemon {
@@ -266,7 +267,7 @@ class Pidgeotto extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class Pidgeot extends Pokemon {
@@ -281,7 +282,7 @@ class Pidgeot extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class Ratata extends Pokemon {
@@ -296,7 +297,7 @@ class Ratata extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-
+	
 }
 
 class Raticate extends Pokemon {
@@ -311,9 +312,8 @@ class Raticate extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-
+	
 }
-
 
 class i extends Pokemon {
 	public i() {
@@ -327,7 +327,7 @@ class i extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class j extends Pokemon {
@@ -342,7 +342,7 @@ class j extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class k extends Pokemon {
@@ -357,7 +357,7 @@ class k extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class l extends Pokemon {
@@ -372,7 +372,7 @@ class l extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class m extends Pokemon {
@@ -387,7 +387,7 @@ class m extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class n extends Pokemon {
@@ -402,7 +402,7 @@ class n extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class o extends Pokemon {
@@ -417,7 +417,7 @@ class o extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class p extends Pokemon {
@@ -432,7 +432,7 @@ class p extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class q extends Pokemon {
@@ -447,7 +447,7 @@ class q extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class r extends Pokemon {
@@ -462,7 +462,7 @@ class r extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class s extends Pokemon {
@@ -477,7 +477,7 @@ class s extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class t extends Pokemon {
@@ -492,7 +492,7 @@ class t extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class u extends Pokemon {
@@ -507,7 +507,7 @@ class u extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class v extends Pokemon {
@@ -522,7 +522,7 @@ class v extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class w extends Pokemon {
@@ -537,7 +537,7 @@ class w extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class x extends Pokemon {
@@ -552,7 +552,7 @@ class x extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class y extends Pokemon {
@@ -567,7 +567,7 @@ class y extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
 
 class z extends Pokemon {
@@ -582,6 +582,5 @@ class z extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-
+	
 }
-
