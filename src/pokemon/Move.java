@@ -5,13 +5,6 @@ import pokemon.Pokemon.Type;
 public class Move {
 	public static enum Category {
 		PHYSICAL, SPECIAL, STATUS;
-		
-		@Override
-		public String toString() {
-			String str = super.toString();
-			str = str.substring(0, 1) + str.substring(1).toLowerCase();
-			return str;
-		}
 	}
 	
 	public static final double table_types[][] = {

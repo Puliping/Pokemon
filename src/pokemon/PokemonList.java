@@ -315,272 +315,467 @@ class Raticate extends Pokemon {
 	
 }
 
-class i extends Pokemon {
-	public i() {
+class Spearow extends Pokemon {
+	public Spearow() {
 		id = 21;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
+		hp = maxHP = 284;
+		attack = 240;
+		defense = 174;
+		spAtk = 177;
+		spDef = 177;
 		speed = 262;
-		type1 = Type.BUG;
+		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
 	
 }
 
-class j extends Pokemon {
-	public j() {
+class Fearow extends Pokemon {
+	public Fearow() {
 		id = 22;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
+		hp = maxHP = 334;
+		attack = 306;
+		defense = 351;
+		spAtk = 243;
+		spDef = 243;
+		speed = 328;
+		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
 	
 }
 
-class k extends Pokemon {
-	public k() {
+class Ekans extends Pokemon {
+	public Ekans() {
 		id = 23;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 274;
+		attack = 240;
+		defense = 205;
+		spAtk = 196;
+		spDef = 227;
+		speed = 229;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class l extends Pokemon {
-	public l() {
+class Arbok extends Pokemon {
+	public Arbok() {
 		id = 24;
 		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		attack = 295;
+		defense = 260;
+		spAtk = 251;
+		spDef = 282;
+		speed = 284;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class m extends Pokemon {
-	public m() {
+class Pikachu extends Pokemon {
+	public Pikachu() {
 		id = 25;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 274;
+		attack = 229;
+		defense = 174;
+		spAtk = 218;
+		spDef = 296;
+		speed = 306;
+		type1 = Type.ELECTR;
+		type2 = Type.ELECTR;
 	}
 	
 }
 
-class n extends Pokemon {
-	public n() {
+class Raichu extends Pokemon {
+	public Raichu() {
 		id = 26;
 		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
+		attack = 306;
+		defense = 229;
+		spAtk = 306;
 		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		speed = 328;
+		type1 = Type.ELECTR;
+		type2 = Type.ELECTR;
 	}
 	
 }
 
-class o extends Pokemon {
-	public o() {
+class Sandshrew extends Pokemon {
+	public Sandshrew() {
 		id = 27;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 304;
+		attack = 273;
+		defense = 295;
+		spAtk = 152;
+		spDef = 174;
+		speed = 196;
+		type1 = Type.GROUND;
+		type2 = Type.GROUND;
 	}
 	
 }
 
-class p extends Pokemon {
-	public p() {
+class Sandslash extends Pokemon {
+	public Sandslash() {
 		id = 28;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 354;
+		attack = 328;
+		defense = 350;
+		spAtk = 207;
+		spDef = 229;
+		speed = 251;
+		type1 = Type.GROUND;
+		type2 = Type.GROUND;
 	}
 	
 }
 
-class q extends Pokemon {
-	public q() {
+class Nidoran_F extends Pokemon {
+	public Nidoran_F() {
 		id = 29;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 314;
+		attack = 212;
+		defense = 223;
+		spAtk = 196;
+		spDef = 196;
+		speed = 199;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class r extends Pokemon {
-	public r() {
+class Nidorina extends Pokemon {
+	public Nidorina() {
 		id = 30;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 344;
+		attack = 245;
+		defense = 256;
+		spAtk = 229;
+		spDef = 229;
+		speed = 232;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class s extends Pokemon {
-	public s() {
+class Nidoqueen extends Pokemon {
+	public Nidoqueen() {
 		id = 31;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 384;
+		attack = 289;
+		defense = 300;
+		spAtk = 273;
+		spDef = 295;
+		speed = 276;
+		type1 = Type.POISON;
+		type2 = Type.GROUND;
 	}
 	
 }
 
-class t extends Pokemon {
-	public t() {
+class Nidoran_M extends Pokemon {
+	public Nidoran_M() {
 		id = 32;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 296;
+		attack = 234;
+		defense = 196;
+		spAtk = 196;
+		spDef = 196;
+		speed = 218;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class u extends Pokemon {
-	public u() {
+class Nidorino extends Pokemon {
+	public Nidorino() {
 		id = 33;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 326;
+		attack = 267;
+		defense =3418;
+		spAtk = 229;
+		spDef = 229;
+		speed = 251;
+		type1 = Type.POISON;
+		type2 = Type.POISON;
 	}
 	
 }
 
-class v extends Pokemon {
-	public v() {
+class Nidoking extends Pokemon {
+	public Nidoking() {
 		id = 34;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 366;
+		attack = 311;
+		defense = 278;
+		spAtk = 295;
+		spDef = 273;
+		speed = 295;
+		type1 = Type.POISON;
+		type2 = Type.GROUND;
 	}
 	
 }
 
-class w extends Pokemon {
-	public w() {
+class Clefairy extends Pokemon {
+	public Clefairy() {
 		id = 35;
-		hp = maxHP = 324;
+		hp = maxHP = 344;
 		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		defense = 214;
+		spAtk = 240;
+		spDef = 251;
+		speed = 185;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
 	}
 	
 }
 
-class x extends Pokemon {
-	public x() {
+class Clefable extends Pokemon {
+	public Clefable() {
 		id = 36;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
-		type2 = Type.FLYING;
+		hp = maxHP = 394;
+		attack = 262;
+		defense = 269;
+		spAtk = 295;
+		spDef = 306;
+		speed = 240;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
 	}
 	
 }
 
-class y extends Pokemon {
-	public y() {
+class Vulpix extends Pokemon {
+	public Vulpix() {
 		id = 37;
-		hp = maxHP = 324;
+		hp = maxHP = 280;
+		attack = 199;
+		defense = 196;
+		spAtk = 218;
+		spDef = 251;
+		speed = 251;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
+	}
+	
+}
+
+class Ninetales extends Pokemon {
+	public Ninetales() {
+		id = 38;
+		hp = maxHP = 350;
+		attack = 276;
+		defense = 273;
+		spAtk = 287;
+		spDef = 328;
+		speed = 328;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
+	}
+	
+}
+
+class Jigglypuff extends Pokemon {
+	public Jigglypuff() {
+		id = 39;
+		hp = maxHP = 434;
 		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
+		defense = 152;
+		spAtk = 207;
+		spDef = 163;
+		speed = 152;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
+	}
+	
+}
+
+class Wigglytuff extends Pokemon {
+	public Wigglytuff() {
+		id = 40;
+		hp = maxHP = 484;
+		attack = 262;
+		defense = 207;
+		spAtk = 273;
+		spDef = 218;
+		speed = 207;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
+	}
+	
+}
+
+class Zubat extends Pokemon {
+	public Zubat() {
+		id = 41;
+		hp = maxHP = 284;
+		attack = 207;
+		defense = 185;
+		spAtk = 174;
+		spDef = 196;
+		speed = 229;
+		type1 = Type.POISON;
 		type2 = Type.FLYING;
 	}
 	
 }
 
-class z extends Pokemon {
-	public z() {
-		id = 38;
-		hp = maxHP = 324;
-		attack = 207;
-		defense = 218;
-		spAtk = 284;
-		spDef = 284;
-		speed = 262;
-		type1 = Type.BUG;
+class Golbat extends Pokemon {
+	public Golbat() {
+		id = 42;
+		hp = maxHP = 354;
+		attack = 284;
+		defense = 262;
+		spAtk = 251;
+		spDef = 273;
+		speed = 306;
+		type1 = Type.POISON;
 		type2 = Type.FLYING;
+	}
+	
+}
+
+class Oddish extends Pokemon {
+	public Oddish() {
+		id = 43;
+		hp = maxHP = 294;
+		attack = 218;
+		defense = 229;
+		spAtk = 273;
+		spDef = 251;
+		speed = 174;
+		type1 = Type.GRASS;
+		type2 = Type.POISON;
+	}
+	
+}
+
+class Gloom extends Pokemon {
+	public Gloom() {
+		id = 44;
+		hp = maxHP = 324;
+		attack = 251;
+		defense = 262;
+		spAtk = 295;
+		spDef = 273;
+		speed = 196;
+		type1 = Type.GRASS;
+		type2 = Type.POISON;
+	}
+	
+}
+
+class Vileplume extends Pokemon {
+	public Vileplume() {
+		id = 45;
+		hp = maxHP = 354;
+		attack = 284;
+		defense = 295;
+		spAtk = 328;
+		spDef = 306;
+		speed = 218;
+		type1 = Type.GRASS;
+		type2 = Type.POISON;
+	}
+	
+}
+
+class Paras extends Pokemon {
+	public Paras() {
+		id = 46;
+		hp = maxHP = 274;
+		attack = 262;
+		defense = 229;
+		spAtk = 207;
+		spDef = 229;
+		speed = 163;
+		type1 = Type.BUG;
+		type2 = Type.GRASS;
+	}
+	
+}
+
+class Parasect extends Pokemon {
+	public Parasect() {
+		id = 47;
+		hp = maxHP = 324;
+		attack = 317;
+		defense = 284;
+		spAtk = 240;
+		spDef = 284;
+		speed = 174;
+		type1 = Type.BUG;
+		type2 = Type.GRASS;
+	}
+	
+}
+
+class Venonat extends Pokemon {
+	public Venonat() {
+		id = 48;
+		hp = maxHP = 324;
+		attack = 229;
+		defense = 218;
+		spAtk = 196;
+		spDef = 229;
+		speed = 207;
+		type1 = Type.BUG;
+		type2 = Type.POISON;
+	}
+	
+}
+
+class Venomoth extends Pokemon {
+	public Venomoth() {
+		id = 49;
+		hp = maxHP = 344;
+		attack = 251;
+		defense = 240;
+		spAtk = 306;
+		spDef = 273;
+		speed = 306;
+		type1 = Type.BUG;
+		type2 = Type.POISON;
+	}
+	
+}
+
+class Diglett extends Pokemon {
+	public Diglett() {
+		id = 50;
+		hp = maxHP = 224;
+		attack = 229;
+		defense = 163;
+		spAtk = 185;
+		spDef = 207;
+		speed = 317;
+		type1 = Type.GROUND;
+		type2 = Type.GROUND;
+	}
+	
+}
+
+class Dugtrio extends Pokemon {
+	public Dugtrio() {
+		id = 51;
+		hp = maxHP = 274;
+		attack = 284;
+		defense = 218;
+		spAtk = 218;
+		spDef = 262;
+		speed = 372;
+		type1 = Type.GROUND;
+		type2 = Type.GROUND;
 	}
 	
 }
