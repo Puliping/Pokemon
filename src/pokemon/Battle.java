@@ -21,9 +21,9 @@ public class Battle {
 		System.out.println(treinador1.getTeam());
 		for (i = 1; i <= quantidade; i++) {
 			for (j = 1; j <= 4; j++) {
-				System.out.println("Escolha o " + i + " golpe do " + j + " pokemons :");
+				System.out.println("Escolha o " + j + " golpe do " + i + " pokemons :");
 				String nameMove = scan.nextLine();
-				treinador1.setMove(i, j, nameMove);
+				treinador1.setMove(i-1, j, nameMove);
 			}
 		}
 
@@ -42,9 +42,9 @@ public class Battle {
 		System.out.println(treinador2.getTeam());
 		for (i = 1; i <= quantidade; i++) {
 			for (j = 1; j <= 4; j++) {
-				System.out.println("Escolha o " + i + " golpe do " + j + " pokemons :");
+				System.out.println("Escolha o " + j + " golpe do " + i + " pokemons :");
 				String nameMove = scan.nextLine();
-				treinador2.setMove(i, j, nameMove);
+				treinador2.setMove(i-1, j, nameMove);
 			}
 		}
 
