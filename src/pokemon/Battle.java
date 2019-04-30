@@ -23,10 +23,10 @@ public class Battle {
 			for (j = 1; j <= 4; j++) {
 				System.out.println("Escolha o " + j + " golpe do " + i + " pokemons :");
 				String nameMove = scan.nextLine();
-				treinador1.setMove(i-1, j, nameMove);
+				treinador1.setMove(i - 1, j, nameMove);
 			}
 		}
-
+		
 		System.out.println("Escolha o seu nome jogador numero 2: ");
 		treinador = scan.nextLine();
 		System.out.println("Seu nome é: " + treinador);
@@ -44,10 +44,10 @@ public class Battle {
 			for (j = 1; j <= 4; j++) {
 				System.out.println("Escolha o " + j + " golpe do " + i + " pokemons :");
 				String nameMove = scan.nextLine();
-				treinador2.setMove(i-1, j, nameMove);
+				treinador2.setMove(i - 1, j, nameMove);
 			}
 		}
-
+		scan.close();
 	}
-
+	
 }
