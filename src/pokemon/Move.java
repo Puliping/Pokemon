@@ -67,11 +67,11 @@ public class Move {
 		return str;
 	}
 	
-	public double damage(Pokemon target, Move move) {
+	public double damage(Pokemon attck ,Pokemon target, Move move) {
 		if (move.category.equals(Category.PHYSICAL)) {
-			return (((42 + move.power + target.attack) / 50) + 2) * modifier(target, move);
+			return (((42 + move.power + (target.defense/attck.attack)) / 50) + 2) * modifier(target, move);
 		} else {
-			return (((42 + move.power + target.spAtk) / 50) + 2) * modifier(target, move);
+			return (((42 + move.power + (target.spDef/attck.spAtk)) / 50) + 2) * modifier(target, move);
 		}
 	}
 	

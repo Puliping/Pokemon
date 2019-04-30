@@ -17,7 +17,7 @@ public class Trainer {
 			active = 0;
 	}
 	
-	private static Pokemon getGenIPokemon(int id) {
+	private Pokemon getGenIPokemon(int id) {
 		Pokemon pkmn = null;
 		switch (id) {
 		case 0:
@@ -83,99 +83,6 @@ public class Trainer {
 		case 20:
 			pkmn = new Raticate();
 			break;
-		case 21:
-			pkmn = new Spearow();
-			break;
-		case 22:
-			pkmn = new Fearow();
-			break;
-		case 23:
-			pkmn = new Ekans();
-			break;
-		case 24:
-			pkmn = new Arbok();
-			break;
-		case 25:
-			pkmn = new Pikachu();
-			break;
-		case 26:
-			pkmn = new Raichu();
-			break;
-		case 27:
-			pkmn = new Sandshrew();
-			break;
-		case 28:
-			pkmn = new Sandslash();
-			break;
-		case 29:
-			pkmn = new Nidoran_F();
-			break;
-		case 30:
-			pkmn = new Nidorina();
-			break;
-		case 31:
-			pkmn = new Nidoqueen();
-			break;
-		case 32:
-			pkmn = new Nidoran_M();
-			break;
-		case 33:
-			pkmn = new Nidorino();
-			break;
-		case 34:
-			pkmn = new Nidoking();
-			break;
-		case 35:
-			pkmn = new Clefairy();
-			break;
-		case 36:
-			pkmn = new Clefable();
-			break;
-		case 37:
-			pkmn = new Vulpix();
-			break;
-		case 38:
-			pkmn = new Ninetales();
-			break;
-		case 39:
-			pkmn = new Jigglypuff();
-			break;
-		case 40:
-			pkmn = new Wigglytuff();
-			break;
-		case 41:
-			pkmn = new Zubat();
-			break;
-		case 42:
-			pkmn = new Golbat();
-			break;
-		case 43:
-			pkmn = new Oddish();
-			break;
-		case 44:
-			pkmn = new Gloom();
-			break;
-		case 45:
-			pkmn = new Vileplume();
-			break;
-		case 46:
-			pkmn = new Paras();
-			break;
-		case 47:
-			pkmn = new Parasect();
-			break;
-		case 48:
-			pkmn = new Venonat();
-			break;
-		case 49:
-			pkmn = new Venomoth();
-			break;
-		case 50:
-			pkmn = new Diglett();
-			break;
-		case 51:
-			pkmn = new Dugtrio();
-			break;	
 		}
 		return pkmn;
 	}
