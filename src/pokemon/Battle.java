@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Battle {
 	static Scanner scan = new Scanner(System.in);
+	
 	public static Trainer setTrainer(int num) {
 		System.out.println("<< Treinador " + num + " >>");
 		System.out.println("Qual seu nome?");
@@ -28,7 +29,8 @@ public class Battle {
 		}
 		trnr.addToTeam(results);
 		System.out.println(trnr.getTeam());
-		System.out.println("Escolha os golpes dos seus Pokémons:");
+		System.out.println("Escolha os golpes dos seus Pokémons");
+		System.out.println("Ex.: \"Pound\" ou \"Razor Whip\"");
 		for (int i = 0; i < trnr.getTeam().size(); i++) {
 			System.out.println((i + 1) + ". " + trnr.getTeam(i));
 			for (int j = 1; j <= 4; j++) {
@@ -41,16 +43,30 @@ public class Battle {
 		return trnr;
 	}
 	
+	public static void battle(Trainer trnr1, Trainer trnr2) {
+		System.out.println("<< Batalha >>");
+		for (int i = 1; trnr1.getTeam().size() > 0 && trnr2.getTeam().size() > 0; i++) {
+			System.out.println("Turno " + i);
+			System.out.println(printActive(trnr1));
+			System.out.println(printActive(trnr2));
+			
+		}
+	
+	}
+	
+	public static String printActive(Trainer trnr) {
+		String str = trnr + ": " + trnr.getTeam(trnr.getActive());
+		str += " (" + trnr.getTeam(trnr.getActive()).getHP() + "/" + trnr.getTeam(trnr.getActive()).getMaxHP() + ")";
+		return str;
+	}
+	
 	public static void main(String[] agrs) {
-		int i, j;
-		Scanner scan = new Scanner(System.in);
-		
 		Trainer trnr1 = setTrainer(1);
 		Trainer trnr2 = setTrainer(2);
 		
-		
-		// BATALHA
-		
+		battle(trnr1, trnr2);
+		// @formatter:off
+/*		int i;
 		int active1 = 0, active2 = 0;
 		System.out.println("Começa a batalha:");
 		for (i = 1; trnr1.getTeam().size() > 0 && trnr2.getTeam().size() > 0; i++) {
@@ -118,6 +134,7 @@ public class Battle {
 		}
 		
 		scan.close();
+*/		// @formatter:on
 	}
 	
 }

@@ -111,12 +111,21 @@ public class Trainer {
 	}
 	
 	public void removeFromTeam(int num) {
-		if (num >= 0 && num < team.size())
+		if (num >= 0 && num < team.size()) {
 			team.remove(num);
+		}
 	}
 	
 	public Pokemon getTeam(int num) {
 		return team.get(num);
+	}
+	
+	public int getActive() {
+		return active;
+	}
+	
+	public void setActive(int num) {
+		active = num;
 	}
 	
 	public LinkedList<Pokemon> getTeam() {
