@@ -52,9 +52,9 @@ public class Battle {
 			System.out.println("Turno " + i);
 			System.out.println(turnString(trnr1));
 			System.out.println(turnString(trnr2));
-			System.out.println("\n<< Treinador 1 >>");
+			System.out.println("\n<< " + trnr1 + " >>");
 			res1 = turnChoice(trnr1, trnr2);
-			System.out.println("\n<< Treinador 2 >>");
+			System.out.println("\n<< " + trnr2 + " >>");
 			res2 = turnChoice(trnr2, trnr1);
 			
 			// Controller?
