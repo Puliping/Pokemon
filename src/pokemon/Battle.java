@@ -79,7 +79,6 @@ public class Battle {
 		} else {
 			System.out.println(trnr2 + " ganhou!");
 		}
-		
 	}
 	
 	private static String turnString(Trainer trnr) {
@@ -126,7 +125,7 @@ public class Battle {
 		System.out.println("[4] " + trnr.getMove(4));
 	}
 	
-	private static void printItem() {
+	private static void printBag() {
 		System.out.println("Escolha o item");
 		System.out.println("[1] Potion");
 		System.out.println("[2] Super Potion");
@@ -171,7 +170,7 @@ public class Battle {
 				ok = true;
 				break;
 			case 2:
-				printItem();
+				printBag();
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {

@@ -93,7 +93,7 @@ public class Trainer {
 			move = new Pound();
 			break;
 		case "Karate Chop":
-			move = new KarateChop();
+			move = new Karate_Chop();
 			break;
 		}
 		return move;

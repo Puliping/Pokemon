@@ -10,48 +10,48 @@ class Pound extends Move {
 	}
 }
 
-class KarateChop extends Move {
-	public KarateChop() {
+class Karate_Chop extends Move {
+	public Karate_Chop() {
 		power = 50;
 		type = Type.FIGHT;
 		category = Category.PHYSICAL;
 	}
 }
 
-class MegaPunch extends Move {
-	public MegaPunch() {
+class Mega_Punch extends Move {
+	public Mega_Punch() {
 		power = 80;
 		type = Type.NORMAL;
 		category = Category.PHYSICAL;
 	}
 }
 
-class FirePunch extends Move {
-	public FirePunch() {
+class Fire_Punch extends Move {
+	public Fire_Punch() {
 		power = 75;
 		type = Type.FIRE;
 		category = Category.PHYSICAL;
 	}
 }
 
-class IcePunch extends Move {
-	public IcePunch() {
+class Ice_Punch extends Move {
+	public Ice_Punch() {
 		power = 75;
 		type = Type.ICE;
 		category = Category.PHYSICAL;
 	}
 }
 
-class ThunderPunch extends Move {
-	public ThunderPunch() {
+class Thunder_Punch extends Move {
+	public Thunder_Punch() {
 		power = 75;
 		type = Type.ELECTR;
 		category = Category.PHYSICAL;
 	}
 }
 
-class RazorWind extends Move {
-	public RazorWind() {
+class Razor_Wind extends Move {
+	public Razor_Wind() {
 		power = 80;
 		type = Type.NORMAL;
 		category = Category.SPECIAL;
@@ -66,16 +66,16 @@ class Gust extends Move {
 	}
 }
 
-class WingAttack extends Move {
-	public WingAttack() {
+class Wing_Attack extends Move {
+	public Wing_Attack() {
 		power = 60;
 		type = Type.FIGHT;
 		category = Category.PHYSICAL;
 	}
 }
 
-class VineWhip extends Move {
-	public VineWhip() {
+class Vine_Whip extends Move {
+	public Vine_Whip() {
 		power = 45;
 		type = Type.GRASS;
 		category = Category.PHYSICAL;
@@ -90,8 +90,8 @@ class Flamethrower extends Move {
 	}
 }
 
-class HydroPump extends Move {
-	public HydroPump() {
+class Hydro_Pump extends Move {
+	public Hydro_Pump() {
 		power = 110;
 		type = Type.WATER;
 		category = Category.SPECIAL;
@@ -103,5 +103,14 @@ class Surf extends Move {
 		power = 90;
 		type = Type.WATER;
 		category = Category.SPECIAL;
+	}
+}
+
+class Quick_Attack extends Move {
+	public Quick_Attack() {
+		power = 40;
+		type = Type.NORMAL;
+		category = Category.PHYSICAL;
+		priority = 1;
 	}
 }
