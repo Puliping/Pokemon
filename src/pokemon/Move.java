@@ -31,12 +31,12 @@ public class Move {
 	protected Type type;
 	protected Category category;
 	
-	public double modifier(Pokemon target, Move move) {
+	public double modifier(Pokemon target) {
 		if (target.getType1().equals(target.getType2())) {
-			return (table_types[move.type.ordinal()][target.type1.ordinal()]);
+			return (table_types[type.ordinal()][target.type1.ordinal()]);
 		} else {
-			return (table_types[move.type.ordinal()][target.type1.ordinal()]
-					* table_types[move.type.ordinal()][target.type2.ordinal()]);
+			return (table_types[type.ordinal()][target.type1.ordinal()]
+					* table_types[type.ordinal()][target.type2.ordinal()]);
 		}
 	}
 	
@@ -67,12 +67,12 @@ public class Move {
 		return str;
 	}
 	
-	public int damage(Pokemon pkmn, Pokemon target, Move move) {
+	public int damage(Pokemon pkmn, Pokemon target) {
 		int dmg;
-		if (move.category.equals(Category.PHYSICAL)) {
-			dmg = (int) (((42.0 * move.getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target, move));
+		if (category.equals(Category.PHYSICAL)) {
+			dmg = (int) (((42.0 * getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target));
 		} else {
-			dmg = (int) (((42.0 * move.getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target, move));
+			dmg = (int) (((42.0 * getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target));
 		}
 		return dmg;
 	}

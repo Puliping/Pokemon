@@ -2,6 +2,8 @@ package pokemon;
 
 import java.util.Scanner;
 
+import controller.*;
+
 public class Battle {
 	static Scanner scan = new Scanner(System.in);
 	
@@ -44,20 +46,168 @@ public class Battle {
 	}
 	
 	public static void battle(Trainer trnr1, Trainer trnr2) {
+		int[] res1, res2;
 		System.out.println("<< Batalha >>");
 		for (int i = 1; trnr1.getTeam().size() > 0 && trnr2.getTeam().size() > 0; i++) {
 			System.out.println("Turno " + i);
-			System.out.println(printActive(trnr1));
-			System.out.println(printActive(trnr2));
+			System.out.println(turnString(trnr1));
+			System.out.println(turnString(trnr2));
+			System.out.println("\n<< Treinador 1 >>");
+			res1 = turnChoice(trnr1, trnr2);
+			System.out.println("\n<< Treinador 2 >>");
+			res2 = turnChoice(trnr2, trnr1);
 			
+			// Controller?
+			
+			switch (res1[0]) {
+			
+			}
+			switch (res2[0]) {
+			
+			}
+			
+			// Controller?
+			
+			if (trnr1.getTeam(trnr1.getActive()).getHP() == 0)
+				faint(trnr1);
+			if (trnr2.getTeam(trnr2.getActive()).getHP() == 0)
+				faint(trnr2);
 		}
-	
+		System.out.println("<< Fim da Batalha >>");
+		if (trnr1.getTeam().size() > 0) {
+			System.out.println(trnr1 + " ganhou!");
+		} else {
+			System.out.println(trnr2 + " ganhou!");
+		}
+		
 	}
 	
-	public static String printActive(Trainer trnr) {
+	private static String turnString(Trainer trnr) {
 		String str = trnr + ": " + trnr.getTeam(trnr.getActive());
 		str += " (" + trnr.getTeam(trnr.getActive()).getHP() + "/" + trnr.getTeam(trnr.getActive()).getMaxHP() + ")";
 		return str;
+	}
+	
+	private static void faint(Trainer trnr) {
+		System.out.println(trnr.getTeam(trnr.getActive()) + " desmaiou!");
+		trnr.removeFromTeam(trnr.getActive());
+		for (boolean ok = false; !ok;) {
+			printPokemon(trnr);
+			int opt;
+			try {
+				opt = Integer.parseInt(scan.nextLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Escolha inválida...");
+				continue;
+			}
+			if (opt < 1 || opt > trnr.getTeam().size()) {
+				System.out.println("Escolha inválida...");
+				continue;
+			}
+			trnr.shift(opt - 1);
+			ok = true;
+		}
+		
+	}
+	
+	private static void printAction() {
+		System.out.println("Escolha sua ação");
+		System.out.println("[1] Lutar");
+		System.out.println("[2] Itens");
+		System.out.println("[3] Pokémon");
+		System.out.println("[4] Fugir");
+	}
+	
+	private static void printFight(Trainer trnr) {
+		System.out.println("Escolha o ataque");
+		System.out.println("[1] " + trnr.getMove(1));
+		System.out.println("[2] " + trnr.getMove(2));
+		System.out.println("[3] " + trnr.getMove(3));
+		System.out.println("[4] " + trnr.getMove(4));
+	}
+	
+	private static void printItem() {
+		System.out.println("Escolha o item");
+		System.out.println("[1] Potion");
+		System.out.println("[2] Super Potion");
+		System.out.println("[3] Hyper Potion");
+		System.out.println("[4] Max Potion");
+	}
+	
+	private static void printPokemon(Trainer trnr) {
+		System.out.println("Escolha o Pokémon para substituir");
+		for (int j = 0; j < trnr.getTeam().size(); j++) {
+			System.out.print("[" + (j + 1) + "] " + trnr.getTeam(j));
+			if (j == trnr.getActive())
+				System.out.print("  <");
+			System.out.println();
+		}
+	}
+	
+	private static int[] turnChoice(Trainer trnr, Trainer opp) {
+		int[] res = new int[3];
+		for (boolean ok = false; !ok;) {
+			printAction();
+			try {
+				res[0] = Integer.parseInt(scan.nextLine());
+			} catch (NumberFormatException e) {
+				System.out.println("Escolha inválida...");
+				continue;
+			}
+			switch (res[0]) {
+			case 1:
+				printFight(trnr);
+				try {
+					res[1] = Integer.parseInt(scan.nextLine());
+				} catch (NumberFormatException e) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				if (res[1] < 1 || res[1] > 4) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				res[2] = trnr.getMove(res[1]).damage(trnr.getTeam(trnr.getActive()), opp.getTeam(opp.getActive()));
+				ok = true;
+				break;
+			case 2:
+				printItem();
+				try {
+					res[1] = Integer.parseInt(scan.nextLine());
+				} catch (NumberFormatException e) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				if (res[1] < 1 || res[1] > 4) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				res[2] = trnr.useItem(res[1]);
+				ok = true;
+				break;
+			case 3:
+				printPokemon(trnr);
+				try {
+					res[1] = Integer.parseInt(scan.nextLine());
+				} catch (NumberFormatException e) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				if (res[1] == trnr.getActive() + 1) {
+					System.out.println("Este Pokémon já está ativo!");
+					break;
+				}
+				if (res[1] < 1 || res[1] > trnr.getTeam().size()) {
+					System.out.println("Escolha inválida...");
+					break;
+				}
+				ok = true;
+				break;
+			case 4:
+				System.out.println("É impossível fugir da batalha!");
+			}
+		}
+		return res;
 	}
 	
 	public static void main(String[] agrs) {
@@ -65,76 +215,7 @@ public class Battle {
 		Trainer trnr2 = setTrainer(2);
 		
 		battle(trnr1, trnr2);
-		// @formatter:off
-/*		int i;
-		int active1 = 0, active2 = 0;
-		System.out.println("Começa a batalha:");
-		for (i = 1; trnr1.getTeam().size() > 0 && trnr2.getTeam().size() > 0; i++) {
-			System.out.println("Turno " + i + ":");
-			System.out.println(trnr1 + " jogou o " + trnr1.getTeam(active1));
-			System.out.println(trnr2 + " jogou o " + trnr2.getTeam(active2));
-			System.out.println(trnr1 + " faça a sua jogada ");
-			System.out.println("1:atacar  2:trocar pokemon  3:usar item   4:fugir");
-			int jogada1 = Integer.parseInt(scan.nextLine());
-			
-			switch (jogada1) {
-			case 1:
-				System.out.println("Escolha o seu ataque:");
-				// mostrar para ele os ataques
-				Move move = new Move();
-				// enviar pokemon para o dano
-				int damage1 = move.damage(trnr1.getTeam(active1), trnr2.getTeam(active2), move);
-				break;
-			case 2:
-				System.out.println("Qual pokemon vc quer para substituir:");
-				int sub = Integer.parseInt(scan.nextLine());
-				trnr1.shift(sub);
-				break;
-			case 3:
-				System.out.println("Qual pokemon item vc quer usar e em qual pokemon:");
-				int item = Integer.parseInt(scan.nextLine());
-				int pokemonItem = Integer.parseInt(scan.nextLine());
-				trnr1.useItem(item, trnr1.getTeam(pokemonItem));
-				break;
-			case 4:
-				System.out.println("Nao e possivel fuigr de uma batalha seu covarde! \\m/");
-				// fazer um while
-				break;
-			}
-			System.out.println(trnr2 + " faça a sua jogada ");
-			System.out.println("1:atacar  2:trocar pokemon  3:usar item   4:fugir");
-			int jogada2 = Integer.parseInt(scan.nextLine());
-			
-			switch (jogada2) {
-			case 1:
-				System.out.println("Escolha o seu ataque:");
-				// mostrar para ele os ataques
-				int moveAttack = Integer.parseInt(scan.nextLine());
-				
-				Move move = new Move();
-				// enviar pokemon para o dano
-				int damage1 = move.damage(trnr2.getTeam(active2), trnr1.getTeam(active1), move);
-				break;
-			case 2:
-				System.out.println("Qual pokemon vc quer para substituir:");
-				int sub = Integer.parseInt(scan.nextLine());
-				trnr2.shift(sub);
-				break;
-			case 3:
-				System.out.println("Qual pokemon item vc quer usar e em qual pokemon:");
-				int item = Integer.parseInt(scan.nextLine());
-				int pokemonItem = Integer.parseInt(scan.nextLine());
-				trnr2.useItem(item, trnr1.getTeam(pokemonItem));
-				break;
-			case 4:
-				System.out.println("Nao e possivel fuigr de uma batalha seu covarde! \\m/");
-				// fazer um while
-				break;
-			}
-		}
-		
 		scan.close();
-*/		// @formatter:on
 	}
 	
 }

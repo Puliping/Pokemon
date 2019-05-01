@@ -72,27 +72,6 @@ public class Pokemon {
 		return str;
 	}
 	
-	public int heal(int heal) {
-		if (hp == 0 || hp == maxHP) {
-			return 0;
-		} else {
-			int dif = maxHP - hp;
-			hp += heal;
-			if (hp > maxHP)
-				hp = maxHP;
-			return Math.min(dif, heal);
-		}
-	}
-	
-	public int takeDamage(int dmg) {
-		int dif = hp;
-		hp -= dmg;
-		if (hp <= 0)
-			return dif;
-		else
-			return dmg;
-	}
-	
 	public static void main(String[] args) {
 		Pokemon pkmn1 = new Bulbasaur();
 		Pokemon pkmn2 = new Blastoise();
