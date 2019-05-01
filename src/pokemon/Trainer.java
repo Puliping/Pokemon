@@ -7,7 +7,7 @@ public class Trainer {
 	protected int active;
 	protected String name;
 	protected LinkedList<Pokemon> team = new LinkedList<Pokemon>();
-
+	
 	public Trainer(String name, int... ids) {
 		this.name = name;
 		for (int i : ids) {
@@ -114,11 +114,13 @@ public class Trainer {
 		if (num >= 0 && num < team.size())
 			team.remove(num);
 	}
-	public String getTeam(int num) {
-		return team.get(num).toString();
+	
+	public Pokemon getTeam(int num) {
+		return team.get(num);
 	}
-	public String getTeam() {
-		return team.toString();
+	
+	public LinkedList<Pokemon> getTeam() {
+		return team;
 	}
 	
 	public void swapTeam(int num1, int num2) {
@@ -149,35 +151,43 @@ public class Trainer {
 		this.setMove(active, num, id);
 	}
 	
-	public String getMove1(int pkmn) {
+	public Move getMove1(int pkmn) {
+		if (team.size() <= pkmn)
+			return null;
 		return team.get(pkmn).getMove1();
 	}
 	
-	public String getMove1() {
+	public Move getMove1() {
 		return this.getMove1(active);
 	}
 	
-	public String getMove2(int pkmn) {
+	public Move getMove2(int pkmn) {
+		if (team.size() <= pkmn)
+			return null;
 		return team.get(pkmn).getMove2();
 	}
 	
-	public String getMove2() {
+	public Move getMove2() {
 		return this.getMove1(active);
 	}
 	
-	public String getMove3(int pkmn) {
+	public Move getMove3(int pkmn) {
+		if (team.size() <= pkmn)
+			return null;
 		return team.get(pkmn).getMove3();
 	}
 	
-	public String getMove3() {
+	public Move getMove3() {
 		return this.getMove3(active);
 	}
 	
-	public String getMove4(int pkmn) {
+	public Move getMove4(int pkmn) {
+		if (team.size() <= pkmn)
+			return null;
 		return team.get(pkmn).getMove4();
 	}
 	
-	public String getMove4() {
+	public Move getMove4() {
 		return this.getMove4(active);
 	}
 	
@@ -192,32 +202,32 @@ public class Trainer {
 			active = num;
 	}
 	
-	public void useItem(String id, Pokemon pkmn) {
-		useGenIItem(id, pkmn);
+	public int useItem(int id, Pokemon pkmn) {
+		return useGenIItem(id, pkmn);
 	}
 	
-	public void useItem(String id) {
+	public void useItem(int id) {
 		this.useItem(id, team.get(active));
 	}
 	
-	private boolean useGenIItem(String id, Pokemon pkmn) {
+	private int useGenIItem(int id, Pokemon pkmn) {
 		switch (id) {
-		case "Potion":
+		case 1: // Potion
 			return pkmn.heal(20);
-		case "Super Potion":
+		case 2: // Super Potion
 			return pkmn.heal(50);
-		case "Hyper Potion":
+		case 3: // Hyper Potion
 			return pkmn.heal(200);
-		case "Max Potion":
+		case 4: // Max Potion
 			return pkmn.heal(pkmn.getMaxHP());
-		case "Full Restore":
+		case 5: // Full Restore
 			return pkmn.heal(pkmn.getMaxHP());
 		}
-		return false;
+		return -1;
 	}
 	
 	public static void main(String[] args) {
-		Trainer trnr = new Trainer("Gabriel", 12, 6);
+		Trainer trnr = new Trainer("Gabriel");
 		System.out.println(trnr);
 		System.out.println(trnr.getTeam());
 		System.out.println(trnr.getMove1());

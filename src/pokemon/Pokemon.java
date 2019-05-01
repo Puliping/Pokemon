@@ -49,20 +49,20 @@ public class Pokemon {
 		return type2.toString();
 	}
 	
-	public String getMove1() {
-		return move1.toString();
+	public Move getMove1() {
+		return move1;
 	}
 	
-	public String getMove2() {
-		return move1.toString();
+	public Move getMove2() {
+		return move2;
 	}
 	
-	public String getMove3() {
-		return move1.toString();
+	public Move getMove3() {
+		return move3;
 	}
 	
-	public String getMove4() {
-		return move1.toString();
+	public Move getMove4() {
+		return move4;
 	}
 	
 	@Override
@@ -72,19 +72,25 @@ public class Pokemon {
 		return str;
 	}
 	
-	public boolean heal(int heal) {
-		if (hp == 0 || hp == maxHP)
-			return false;
-		hp += heal;
-		return true;
+	public int heal(int heal) {
+		if (hp == 0 || hp == maxHP) {
+			return 0;
+		} else {
+			int dif = maxHP - hp;
+			hp += heal;
+			if (hp > maxHP)
+				hp = maxHP;
+			return Math.min(dif, heal);
+		}
 	}
 	
-	public boolean takeDamage(int dmg) {
+	public int takeDamage(int dmg) {
+		int dif = hp;
 		hp -= dmg;
 		if (hp <= 0)
-			return true;
+			return dif;
 		else
-			return false;
+			return dmg;
 	}
 	
 	public static void main(String[] args) {

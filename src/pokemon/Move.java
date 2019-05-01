@@ -67,12 +67,14 @@ public class Move {
 		return str;
 	}
 	
-	public double damage(Pokemon attck ,Pokemon target, Move move) {
+	public int damage(Pokemon pkmn, Pokemon target, Move move) {
+		int dmg;
 		if (move.category.equals(Category.PHYSICAL)) {
-			return (((42 + move.power + (target.defense/attck.attack)) / 50) + 2) * modifier(target, move);
+			dmg = (int) (((42.0 * move.getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target, move));
 		} else {
-			return (((42 + move.power + (target.spDef/attck.spAtk)) / 50) + 2) * modifier(target, move);
+			dmg = (int) (((42.0 * move.getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target, move));
 		}
+		return dmg;
 	}
 	
 }
