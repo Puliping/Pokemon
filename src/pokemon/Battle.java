@@ -3,15 +3,15 @@ package pokemon;
 import java.util.Scanner;
 
 public class Battle {
+	static Scanner scan = new Scanner(System.in);
 	public static Trainer setTrainer(int num) {
-		Scanner scan = new Scanner(System.in);
 		System.out.println("<< Treinador " + num + " >>");
 		System.out.println("Qual seu nome?");
 		String name = scan.nextLine();
 		Trainer trnr = new Trainer(name);
 		int[] results = {};
 		for (boolean ok = false; !ok;) {
-			System.out.println("Liste seus pokémons por # do Pokédex");
+			System.out.println("Liste seus pokémons por # do Pokédex (máximo 6)");
 			System.out.println("Ex.: \"3, 15\" para escolher \"Venusaur, Beedrill\"");
 			String team = scan.nextLine();
 			String[] items = team.replaceAll("\\s+", "").split(",");
@@ -37,7 +37,6 @@ public class Battle {
 				trnr.setMove(i, j, move);
 			}
 		}
-		scan.close();
 		System.out.println();
 		return trnr;
 	}
