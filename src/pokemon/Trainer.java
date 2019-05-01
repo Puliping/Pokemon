@@ -7,7 +7,7 @@ public class Trainer {
 	protected int active;
 	protected String name;
 	protected LinkedList<Pokemon> team = new LinkedList<Pokemon>();
-	
+
 	public Trainer(String name, int... ids) {
 		this.name = name;
 		for (int i : ids) {
@@ -114,7 +114,9 @@ public class Trainer {
 		if (num >= 0 && num < team.size())
 			team.remove(num);
 	}
-	
+	public String getTeam(int num) {
+		return team.get(num).toString();
+	}
 	public String getTeam() {
 		return team.toString();
 	}
