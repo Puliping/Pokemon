@@ -12,7 +12,7 @@ public class Battle {
 		Trainer trnr = new Trainer(name);
 		int[] results = {};
 		for (boolean ok = false; !ok;) {
-			System.out.println("Liste seus pok�mons por # do Pok�dex (m�ximo 6)");
+			System.out.println("Liste seus pokemons por # do Pokedex (maximo 6)");
 			System.out.println("Ex.: \"3, 15\" para escolher \"Venusaur, Beedrill\"");
 			String team = scan.nextLine();
 			String[] items = team.replaceAll("\\s+", "").split(",");
@@ -29,7 +29,7 @@ public class Battle {
 		}
 		trnr.addToTeam(results);
 		System.out.println(trnr.getTeam());
-		System.out.println("Escolha os golpes dos seus Pok�mons");
+		System.out.println("Escolha os golpes dos seus Pokemons");
 		System.out.println("Ex.: \"Pound\" ou \"Razor Wind\"");
 		for (int i = 0; i < trnr.getTeam().size(); i++) {
 			System.out.println((i + 1) + ". " + trnr.getTeam(i));
@@ -89,11 +89,11 @@ public class Battle {
 			try {
 				opt = Integer.parseInt(scan.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Escolha inv�lida...");
+				System.out.println("Escolha invalida...");
 				continue;
 			}
 			if (opt < 1 || opt > trnr.getTeam().size()) {
-				System.out.println("Escolha inv�lida...");
+				System.out.println("Escolha invalida...");
 				continue;
 			}
 			trnr.shift(opt - 1);
@@ -103,10 +103,10 @@ public class Battle {
 	}
 	
 	private static void printAction() {
-		System.out.println("Escolha sua a��o");
+		System.out.println("Escolha sua acao");
 		System.out.println("[1] Lutar");
 		System.out.println("[2] Itens");
-		System.out.println("[3] Pok�mon");
+		System.out.println("[3] Pokemon");
 		System.out.println("[4] Fugir");
 	}
 	
@@ -127,7 +127,7 @@ public class Battle {
 	}
 	
 	private static void printPokemon(Trainer trnr) {
-		System.out.println("Escolha o Pok�mon para substituir");
+		System.out.println("Escolha o Pokemon para substituir");
 		for (int j = 0; j < trnr.getTeam().size(); j++) {
 			System.out.print("[" + (j + 1) + "] " + trnr.getTeam(j));
 			if (j == trnr.getActive())
@@ -143,7 +143,7 @@ public class Battle {
 			try {
 				res[0] = Integer.parseInt(scan.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Escolha inv�lida...");
+				System.out.println("Escolha invalida...");
 				continue;
 			}
 			switch (res[0]) {
@@ -152,11 +152,11 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				if (res[1] < 1 || res[1] > 4) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				res[2] = trnr.getMove(res[1]).damage(trnr.getTeam(trnr.getActive()), opp.getTeam(opp.getActive()));
@@ -167,11 +167,11 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				if (res[1] < 1 || res[1] > 4) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				res[2] = trnr.useItem(res[1]);
@@ -182,21 +182,21 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				if (res[1] == trnr.getActive() + 1) {
-					System.out.println("Este Pok�mon j� est� ativo!");
+					System.out.println("Este Pokemon ja esta ativo!");
 					break;
 				}
 				if (res[1] < 1 || res[1] > trnr.getTeam().size()) {
-					System.out.println("Escolha inv�lida...");
+					System.out.println("Escolha invalida...");
 					break;
 				}
 				ok = true;
 				break;
 			case 4:
-				System.out.println("� imposs�vel fugir da batalha!");
+				System.out.println("Impossivel fugir da batalha!(Seu covarde)");
 			}
 		}
 		return res;
