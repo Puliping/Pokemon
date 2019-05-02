@@ -57,10 +57,6 @@ public class Move {
 		return category.toString();
 	}
 	
-	public void use() {
-		
-	}
-	
 	@Override
 	public String toString() {
 		String str = this.getClass().getSimpleName();

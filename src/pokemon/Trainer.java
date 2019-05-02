@@ -82,6 +82,7 @@ public class Trainer {
 		case 20:
 			pkmn = new Raticate();
 			break;
+				
 		}
 		return pkmn;
 	}
@@ -107,7 +108,6 @@ public class Trainer {
 		case "Thunder Punch":
 			move = new Thunder_Punch();
 			break;
-		
 		case "Razor Wind":
 			move = new Razor_Wind();
 			break;
