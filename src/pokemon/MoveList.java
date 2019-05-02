@@ -113,4 +113,61 @@ class Quick_Attack extends Move {
 		category = Category.PHYSICAL;
 		priority = 1;
 	}
+	
+}
+class Psybeam extends Move {
+	public Psybeam() {
+		power = 65;
+		type = Type.PSYCHC;
+		category = Category.SPECIAL;
+	}
+	
+}
+class Sludge extends Move {
+	public Sludge() {
+		power = 65;
+		type = Type.POISON;
+		category = Category.SPECIAL;
+	}
+	
+}
+class Earthquake extends Move {
+	public Earthquake() {
+		power = 100;
+		type = Type.GROUND;
+		category = Category.PHYSICAL;
+	}
+	
+}
+class Rock_Slide extends Move {
+	public Rock_Slide() {
+		power = 75;
+		type = Type.ROCK;
+		category = Category.PHYSICAL;
+	}
+	
+}
+class Leech_Life extends Move {
+	public Leech_Life() {
+		power = 80;
+		type = Type.BUG;
+		category = Category.PHYSICAL;
+	}
+	
+}
+class Lick extends Move {
+	public Lick() {
+		power = 60;
+		type = Type.GHOST;
+		category = Category.PHYSICAL;
+	}
+	
+}
+class Dragon_Rage extends Move {
+	public Dragon_Rage() {
+		power = 40;
+		type = Type.DRAGON;
+		category = Category.SPECIAL;
+	}
+	
 }

@@ -12,7 +12,7 @@ public class Battle {
 		Trainer trnr = new Trainer(name);
 		int[] results = {};
 		for (boolean ok = false; !ok;) {
-			System.out.println("Liste seus pokémons por # do Pokédex (máximo 6)");
+			System.out.println("Liste seus pokï¿½mons por # do Pokï¿½dex (mï¿½ximo 6)");
 			System.out.println("Ex.: \"3, 15\" para escolher \"Venusaur, Beedrill\"");
 			String team = scan.nextLine();
 			String[] items = team.replaceAll("\\s+", "").split(",");
@@ -29,8 +29,8 @@ public class Battle {
 		}
 		trnr.addToTeam(results);
 		System.out.println(trnr.getTeam());
-		System.out.println("Escolha os golpes dos seus Pokémons");
-		System.out.println("Ex.: \"Pound\" ou \"Razor Whip\"");
+		System.out.println("Escolha os golpes dos seus Pokï¿½mons");
+		System.out.println("Ex.: \"Pound\" ou \"Razor Wind\"");
 		for (int i = 0; i < trnr.getTeam().size(); i++) {
 			System.out.println((i + 1) + ". " + trnr.getTeam(i));
 			for (int j = 1; j <= 4; j++) {
@@ -89,11 +89,11 @@ public class Battle {
 			try {
 				opt = Integer.parseInt(scan.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Escolha inválida...");
+				System.out.println("Escolha invï¿½lida...");
 				continue;
 			}
 			if (opt < 1 || opt > trnr.getTeam().size()) {
-				System.out.println("Escolha inválida...");
+				System.out.println("Escolha invï¿½lida...");
 				continue;
 			}
 			trnr.shift(opt - 1);
@@ -103,10 +103,10 @@ public class Battle {
 	}
 	
 	private static void printAction() {
-		System.out.println("Escolha sua ação");
+		System.out.println("Escolha sua aï¿½ï¿½o");
 		System.out.println("[1] Lutar");
 		System.out.println("[2] Itens");
-		System.out.println("[3] Pokémon");
+		System.out.println("[3] Pokï¿½mon");
 		System.out.println("[4] Fugir");
 	}
 	
@@ -127,7 +127,7 @@ public class Battle {
 	}
 	
 	private static void printPokemon(Trainer trnr) {
-		System.out.println("Escolha o Pokémon para substituir");
+		System.out.println("Escolha o Pokï¿½mon para substituir");
 		for (int j = 0; j < trnr.getTeam().size(); j++) {
 			System.out.print("[" + (j + 1) + "] " + trnr.getTeam(j));
 			if (j == trnr.getActive())
@@ -143,7 +143,7 @@ public class Battle {
 			try {
 				res[0] = Integer.parseInt(scan.nextLine());
 			} catch (NumberFormatException e) {
-				System.out.println("Escolha inválida...");
+				System.out.println("Escolha invï¿½lida...");
 				continue;
 			}
 			switch (res[0]) {
@@ -152,11 +152,11 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				if (res[1] < 1 || res[1] > 4) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				res[2] = trnr.getMove(res[1]).damage(trnr.getTeam(trnr.getActive()), opp.getTeam(opp.getActive()));
@@ -167,11 +167,11 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				if (res[1] < 1 || res[1] > 4) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				res[2] = trnr.useItem(res[1]);
@@ -182,21 +182,21 @@ public class Battle {
 				try {
 					res[1] = Integer.parseInt(scan.nextLine());
 				} catch (NumberFormatException e) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				if (res[1] == trnr.getActive() + 1) {
-					System.out.println("Este Pokémon já está ativo!");
+					System.out.println("Este Pokï¿½mon jï¿½ estï¿½ ativo!");
 					break;
 				}
 				if (res[1] < 1 || res[1] > trnr.getTeam().size()) {
-					System.out.println("Escolha inválida...");
+					System.out.println("Escolha invï¿½lida...");
 					break;
 				}
 				ok = true;
 				break;
 			case 4:
-				System.out.println("É impossível fugir da batalha!");
+				System.out.println("ï¿½ impossï¿½vel fugir da batalha!");
 			}
 		}
 		return res;

@@ -95,6 +95,40 @@ public class Trainer {
 		case "Karate Chop":
 			move = new Karate_Chop();
 			break;
+		case "Mega Punch":
+			move = new Mega_Punch();
+			break;
+		case "Fire Punch":
+			move = new Fire_Punch();
+			break;
+		case "Ice Punch":
+			move = new Ice_Punch();
+			break;
+		case "Thunder Punch":
+			move = new Thunder_Punch();
+			break;
+		
+		case "Razor Wind":
+			move = new Razor_Wind();
+			break;
+		case "Gust":
+			move = new Gust();
+			break;
+		case "Wing Attack":
+			move = new Wing_Attack();
+			break;
+		case "Vine Whip":
+			move = new Vine_Whip();
+			break;
+		case "Flamethrower":
+			move = new Flamethrower();
+			break;
+		case "Hydro Pump":
+			move = new Hydro_Pump();
+			break;
+		case "Surf":
+			move = new Surf();
+			break;
 		case "Quick Attack":
 			move = new Quick_Attack();
 			break;
