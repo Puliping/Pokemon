@@ -82,7 +82,141 @@ public class Trainer {
 		case 20:
 			pkmn = new Raticate();
 			break;
-				
+		case 21:
+			pkmn = new Spearow();
+			break;
+		case 22:
+			pkmn = new Fearow();
+			break;
+		case 23:
+			pkmn = new Ekans();
+			break;
+		case 24:
+			pkmn = new Arbok();
+			break;
+		case 25:
+			pkmn = new Pikachu();
+			break;
+		case 26:
+			pkmn = new Raichu();
+			break;
+		case 27:
+			pkmn = new Sandshrew();
+			break;
+		case 28:
+			pkmn = new Sandslash();
+			break;
+		case 29:
+			pkmn = new Nidoran_F();
+			break;
+		case 30:
+			pkmn = new Nidorina();
+			break;
+		case 31:
+			pkmn = new Nidoqueen();
+			break;
+		case 32:
+			pkmn = new Nidoran_M();
+			break;
+		case 33:
+			pkmn = new Nidorino();
+			break;
+		case 34:
+			pkmn = new Nidoking();
+			break;
+		case 35:
+			pkmn = new Clefairy();
+			break;
+		case 36:
+			pkmn = new Clefable();
+			break;
+		case 37:
+			pkmn = new Vulpix();
+			break;
+		case 38:
+			pkmn = new Ninetales();
+			break;
+		case 39:
+			pkmn = new Jigglypuff();
+			break;
+		case 40:
+			pkmn = new Wigglytuff();
+			break;
+		case 41:
+			pkmn = new Zubat();
+			break;
+		case 42:
+			pkmn = new Golbat();
+			break;
+		case 43:
+			pkmn = new Oddish();
+			break;
+		case 44:
+			pkmn = new Gloom();
+			break;
+		case 45:
+			pkmn = new Vileplume();
+			break;
+		case 46:
+			pkmn = new Paras();
+			break;
+		case 47:
+			pkmn = new Parasect();
+			break;
+		case 48:
+			pkmn = new Venonat();
+			break;
+		case 49:
+			pkmn = new Venomoth();
+			break;
+		case 50:
+			pkmn = new Diglett();
+			break;
+		case 51:
+			pkmn = new Dugtrio();
+			break;
+		case 52:
+			pkmn = new Meowth();
+			break;
+		case 53:
+			pkmn = new Persian();
+			break;
+		case 54:
+			pkmn = new Psyduck();
+			break;
+		case 55:
+			pkmn = new Golduck();
+			break;
+		case 56:
+			pkmn = new Mankey();
+			break;
+		case 57:
+			pkmn = new Primeape();
+			break;
+		case 58:
+			pkmn = new Growlithe();
+			break;
+		case 59:
+			pkmn = new Arcanine();
+			break;
+		case 60:
+			pkmn = new Poliwag();
+			break;
+		case 61:
+			pkmn = new Poliwhirl();
+			break;
+		case 62:
+			pkmn = new Poliwrath();
+			break;
+		case 63:
+			pkmn = new Abra();
+			break;
+		case 64:
+			pkmn = new Kadabra();
+			break;
+		case 65:
+			pkmn = new Alakazam();
+			break;
 		}
 		return pkmn;
 	}
@@ -131,6 +265,27 @@ public class Trainer {
 			break;
 		case "Quick Attack":
 			move = new Quick_Attack();
+			break;
+		case "Psybeam":
+			move = new Psybeam();
+			break;
+		case "Sludge":
+			move = new Sludge();
+			break;
+		case "Earthquake":
+			move = new Earthquake();
+			break;
+		case "Rock Slide":
+			move = new Rock_Slide();
+			break;
+		case "Leech Life":
+			move = new Leech_Life();
+			break;
+		case "Lick":
+			move = new Lick();
+			break;
+		case "Dragon Rage":
+			move = new Dragon_Rage();
 			break;
 		}
 		return move;
