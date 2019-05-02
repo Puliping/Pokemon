@@ -1,7 +1,6 @@
 package pokemon;
 
 import java.util.Scanner;
-
 import controller.*;
 
 public class Battle {
@@ -60,10 +59,20 @@ public class Battle {
 			// Controller?
 			
 			switch (res1[0]) {
-			
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
 			}
 			switch (res2[0]) {
-			
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
 			}
 			
 			// Controller?
