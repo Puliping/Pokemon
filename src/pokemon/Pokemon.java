@@ -65,6 +65,12 @@ public class Pokemon {
 		return move4;
 	}
 	
+	public void heal(int heal) {
+		hp += heal;
+		if (hp > maxHP)
+			hp = maxHP;
+	}
+	
 	@Override
 	public String toString() {
 		String str = this.getClass().getSimpleName();

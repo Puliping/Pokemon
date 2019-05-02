@@ -1,17 +1,17 @@
 package controller;
 
-//This is just a way to hold Event objects.
+// This is just a way to hold Event objects.
 class EventSet {
 	private Event[] events = new Event[100];
 	private int index = 0;
 	private int next = 0;
-
+	
 	public void add(Event e) {
 		if (index >= events.length)
 			return; // (In real life, throw exception)
 		events[index++] = e;
 	}
-
+	
 	public Event getNext() {
 		boolean looped = false;
 		int start = next;
@@ -27,7 +27,7 @@ class EventSet {
 		} while (events[next] == null);
 		return events[next];
 	}
-
+	
 	public void removeCurrent() {
 		events[next] = null;
 	}
@@ -35,11 +35,11 @@ class EventSet {
 
 public class Controller {
 	private EventSet es = new EventSet();
-
+	
 	public void addEvent(Event c) {
 		es.add(c);
 	}
-
+	
 	public void run() {
 		Event e;
 		while ((e = es.getNext()) != null) {

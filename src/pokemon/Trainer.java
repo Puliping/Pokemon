@@ -95,6 +95,9 @@ public class Trainer {
 		case "Karate Chop":
 			move = new Karate_Chop();
 			break;
+		case "Quick Attack":
+			move = new Quick_Attack();
+			break;
 		}
 		return move;
 	}

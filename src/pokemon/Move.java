@@ -1,6 +1,7 @@
 package pokemon;
 
 import pokemon.Pokemon.Type;
+import java.util.Random;
 
 public class Move {
 	public static enum Category {
@@ -68,11 +69,13 @@ public class Move {
 	}
 	
 	public int damage(Pokemon pkmn, Pokemon target) {
-		int dmg;
+		int dmg, rand;
+		Random r = new Random();
+		rand = r.nextInt(39) + 217;
 		if (category.equals(Category.PHYSICAL)) {
-			dmg = (int) (((42.0 * getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target));
+			dmg = (int) (((42.0 * getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target) * (double) rand / 255);
 		} else {
-			dmg = (int) (((42.0 * getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target));
+			dmg = (int) (((42.0 * getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target) * (double) rand / 255);
 		}
 		return dmg;
 	}

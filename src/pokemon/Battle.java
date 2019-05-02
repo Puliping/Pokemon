@@ -1,7 +1,6 @@
 package pokemon;
 
 import java.util.Scanner;
-import controller.*;
 
 public class Battle {
 	static Scanner scan = new Scanner(System.in);
@@ -48,38 +47,22 @@ public class Battle {
 		int[] res1, res2;
 		System.out.println("<< Batalha >>");
 		for (int i = 1; trnr1.getTeam().size() > 0 && trnr2.getTeam().size() > 0; i++) {
-			System.out.println("Turno " + i);
+			System.out.println("<< Turno " + i + " >>");
 			System.out.println(turnString(trnr1));
 			System.out.println(turnString(trnr2));
-			System.out.println("\n<< " + trnr1 + " >>");
+			System.out.println("<< " + trnr1 + " >>");
 			res1 = turnChoice(trnr1, trnr2);
-			System.out.println("\n<< " + trnr2 + " >>");
+			System.out.println("<< " + trnr2 + " >>");
 			res2 = turnChoice(trnr2, trnr1);
 			
 			// Controller?
-			
-			switch (res1[0]) {
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-			}
-			switch (res2[0]) {
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-			}
-			
+			System.out.println("Resolvendo turno...");
+			BattleRound be = new BattleRound(trnr1, res1, trnr2, res2);
+			be.run();
 			// Controller?
-			
-			if (trnr1.getTeam(trnr1.getActive()).getHP() == 0)
+			if (trnr1.getTeam(trnr1.getActive()).getHP() <= 0)
 				faint(trnr1);
-			if (trnr2.getTeam(trnr2.getActive()).getHP() == 0)
+			if (trnr2.getTeam(trnr2.getActive()).getHP() <= 0 && trnr2.getTeam().size() != 0)
 				faint(trnr2);
 		}
 		System.out.println("<< Fim da Batalha >>");
@@ -97,8 +80,9 @@ public class Battle {
 	}
 	
 	private static void faint(Trainer trnr) {
-		System.out.println(trnr.getTeam(trnr.getActive()) + " desmaiou!");
 		trnr.removeFromTeam(trnr.getActive());
+		if(trnr.getTeam().size() <= 0)
+			return;
 		for (boolean ok = false; !ok;) {
 			printPokemon(trnr);
 			int opt;
