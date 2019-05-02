@@ -165,7 +165,7 @@ class Lick extends Move {
 }
 class Dragon_Rage extends Move {
 	public Dragon_Rage() {
-		power = 40;
+		power = 50;
 		type = Type.DRAGON;
 		category = Category.SPECIAL;
 	}
