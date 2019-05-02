@@ -12,7 +12,7 @@ class MissingNo extends Pokemon {
 		type1 = Type.FLYING;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Bulbasaur extends Pokemon {
@@ -27,7 +27,7 @@ class Bulbasaur extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Ivysaur extends Pokemon {
@@ -42,7 +42,7 @@ class Ivysaur extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.GRASS;
 	}
-	
+
 }
 
 class Venusaur extends Pokemon {
@@ -57,7 +57,7 @@ class Venusaur extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Charmander extends Pokemon {
@@ -72,7 +72,7 @@ class Charmander extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-	
+
 }
 
 class Charmeleon extends Pokemon {
@@ -87,7 +87,7 @@ class Charmeleon extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-	
+
 }
 
 class Charizard extends Pokemon {
@@ -102,7 +102,7 @@ class Charizard extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Squirtle extends Pokemon {
@@ -117,7 +117,7 @@ class Squirtle extends Pokemon {
 		type1 = Type.WATER;
 		type2 = Type.WATER;
 	}
-	
+
 }
 
 class Wartortle extends Pokemon {
@@ -132,7 +132,7 @@ class Wartortle extends Pokemon {
 		type1 = Type.WATER;
 		type2 = Type.WATER;
 	}
-	
+
 }
 
 class Blastoise extends Pokemon {
@@ -147,7 +147,7 @@ class Blastoise extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.WATER;
 	}
-	
+
 }
 
 class Caterpie extends Pokemon {
@@ -162,7 +162,7 @@ class Caterpie extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.BUG;
 	}
-	
+
 }
 
 class Metapod extends Pokemon {
@@ -177,7 +177,7 @@ class Metapod extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.BUG;
 	}
-	
+
 }
 
 class Butterfree extends Pokemon {
@@ -192,7 +192,7 @@ class Butterfree extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Weedle extends Pokemon {
@@ -207,7 +207,7 @@ class Weedle extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Kakuna extends Pokemon {
@@ -222,7 +222,7 @@ class Kakuna extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Beedrill extends Pokemon {
@@ -237,7 +237,7 @@ class Beedrill extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Pidgey extends Pokemon {
@@ -252,7 +252,7 @@ class Pidgey extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Pidgeotto extends Pokemon {
@@ -267,7 +267,7 @@ class Pidgeotto extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Pidgeot extends Pokemon {
@@ -282,7 +282,7 @@ class Pidgeot extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Ratata extends Pokemon {
@@ -297,7 +297,7 @@ class Ratata extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Raticate extends Pokemon {
@@ -312,7 +312,7 @@ class Raticate extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Spearow extends Pokemon {
@@ -327,7 +327,7 @@ class Spearow extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Fearow extends Pokemon {
@@ -342,7 +342,7 @@ class Fearow extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Ekans extends Pokemon {
@@ -357,7 +357,7 @@ class Ekans extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Arbok extends Pokemon {
@@ -372,7 +372,7 @@ class Arbok extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Pikachu extends Pokemon {
@@ -387,7 +387,7 @@ class Pikachu extends Pokemon {
 		type1 = Type.ELECTR;
 		type2 = Type.ELECTR;
 	}
-	
+
 }
 
 class Raichu extends Pokemon {
@@ -402,7 +402,7 @@ class Raichu extends Pokemon {
 		type1 = Type.ELECTR;
 		type2 = Type.ELECTR;
 	}
-	
+
 }
 
 class Sandshrew extends Pokemon {
@@ -417,7 +417,7 @@ class Sandshrew extends Pokemon {
 		type1 = Type.GROUND;
 		type2 = Type.GROUND;
 	}
-	
+
 }
 
 class Sandslash extends Pokemon {
@@ -432,7 +432,7 @@ class Sandslash extends Pokemon {
 		type1 = Type.GROUND;
 		type2 = Type.GROUND;
 	}
-	
+
 }
 
 class Nidoran_F extends Pokemon {
@@ -447,7 +447,7 @@ class Nidoran_F extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Nidorina extends Pokemon {
@@ -462,7 +462,7 @@ class Nidorina extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Nidoqueen extends Pokemon {
@@ -477,7 +477,7 @@ class Nidoqueen extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.GROUND;
 	}
-	
+
 }
 
 class Nidoran_M extends Pokemon {
@@ -492,7 +492,7 @@ class Nidoran_M extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Nidorino extends Pokemon {
@@ -500,14 +500,14 @@ class Nidorino extends Pokemon {
 		id = 33;
 		hp = maxHP = 326;
 		attack = 267;
-		defense =3418;
+		defense = 3418;
 		spAtk = 229;
 		spDef = 229;
 		speed = 251;
 		type1 = Type.POISON;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Nidoking extends Pokemon {
@@ -522,7 +522,7 @@ class Nidoking extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.GROUND;
 	}
-	
+
 }
 
 class Clefairy extends Pokemon {
@@ -537,7 +537,7 @@ class Clefairy extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Clefable extends Pokemon {
@@ -552,7 +552,7 @@ class Clefable extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Vulpix extends Pokemon {
@@ -567,7 +567,7 @@ class Vulpix extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-	
+
 }
 
 class Ninetales extends Pokemon {
@@ -582,7 +582,7 @@ class Ninetales extends Pokemon {
 		type1 = Type.FIRE;
 		type2 = Type.FIRE;
 	}
-	
+
 }
 
 class Jigglypuff extends Pokemon {
@@ -597,7 +597,7 @@ class Jigglypuff extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Wigglytuff extends Pokemon {
@@ -612,7 +612,7 @@ class Wigglytuff extends Pokemon {
 		type1 = Type.NORMAL;
 		type2 = Type.NORMAL;
 	}
-	
+
 }
 
 class Zubat extends Pokemon {
@@ -627,7 +627,7 @@ class Zubat extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Golbat extends Pokemon {
@@ -642,7 +642,7 @@ class Golbat extends Pokemon {
 		type1 = Type.POISON;
 		type2 = Type.FLYING;
 	}
-	
+
 }
 
 class Oddish extends Pokemon {
@@ -657,7 +657,7 @@ class Oddish extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Gloom extends Pokemon {
@@ -672,7 +672,7 @@ class Gloom extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Vileplume extends Pokemon {
@@ -687,7 +687,7 @@ class Vileplume extends Pokemon {
 		type1 = Type.GRASS;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Paras extends Pokemon {
@@ -702,7 +702,7 @@ class Paras extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.GRASS;
 	}
-	
+
 }
 
 class Parasect extends Pokemon {
@@ -717,7 +717,7 @@ class Parasect extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.GRASS;
 	}
-	
+
 }
 
 class Venonat extends Pokemon {
@@ -732,7 +732,7 @@ class Venonat extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Venomoth extends Pokemon {
@@ -747,7 +747,7 @@ class Venomoth extends Pokemon {
 		type1 = Type.BUG;
 		type2 = Type.POISON;
 	}
-	
+
 }
 
 class Diglett extends Pokemon {
@@ -762,7 +762,7 @@ class Diglett extends Pokemon {
 		type1 = Type.GROUND;
 		type2 = Type.GROUND;
 	}
-	
+
 }
 
 class Dugtrio extends Pokemon {
@@ -777,5 +777,215 @@ class Dugtrio extends Pokemon {
 		type1 = Type.GROUND;
 		type2 = Type.GROUND;
 	}
-	
+
+}
+
+class Meowth extends Pokemon {
+	public Meowth() {
+		id = 52;
+		hp = maxHP = 284;
+		attack = 207;
+		defense = 185;
+		spAtk = 196;
+		spDef = 196;
+		speed = 306;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
+	}
+
+}
+
+class Persian extends Pokemon {
+	public Persian() {
+		id = 53;
+		hp = maxHP = 334;
+		attack = 262;
+		defense = 240;
+		spAtk = 251;
+		spDef = 251;
+		speed = 361;
+		type1 = Type.NORMAL;
+		type2 = Type.NORMAL;
+	}
+
+}
+
+class Psyduck extends Pokemon {
+	public Psyduck() {
+		id = 54;
+		hp = maxHP = 304;
+		attack = 223;
+		defense = 214;
+		spAtk = 251;
+		spDef = 218;
+		speed = 229;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
+	}
+
+}
+
+class Golduck extends Pokemon {
+	public Golduck() {
+		id = 55;
+		hp = maxHP = 364;
+		attack = 289;
+		defense = 280;
+		spAtk = 317;
+		spDef = 284;
+		speed = 295;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
+	}
+
+}
+
+class Mankey extends Pokemon {
+	public Mankey() {
+		id = 56;
+		hp = maxHP = 284;
+		attack = 284;
+		defense = 185;
+		spAtk = 185;
+		spDef = 207;
+		speed = 262;
+		type1 = Type.FIGHT;
+		type2 = Type.FIGHT;
+	}
+
+}
+
+class Primeape extends Pokemon {
+	public Primeape() {
+		id = 57;
+		hp = maxHP = 334;
+		attack = 339;
+		defense = 240;
+		spAtk = 240;
+		spDef = 262;
+		speed = 317;
+		type1 = Type.FIGHT;
+		type2 = Type.FIGHT;
+	}
+
+}
+
+class Growlithe extends Pokemon {
+	public Growlithe() {
+		id = 58;
+		hp = maxHP = 314;
+		attack = 262;
+		defense = 207;
+		spAtk = 262;
+		spDef = 218;
+		speed = 240;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
+	}
+
+}
+
+class Arcanine extends Pokemon {
+	public Arcanine() {
+		id = 59;
+		hp = maxHP = 384;
+		attack = 350;
+		defense = 284;
+		spAtk = 328;
+		spDef = 284;
+		speed = 317;
+		type1 = Type.FIRE;
+		type2 = Type.FIRE;
+	}
+
+}
+
+class Poliwag extends Pokemon {
+	public Poliwag() {
+		id = 60;
+		hp = maxHP = 284;
+		attack = 218;
+		defense = 196;
+		spAtk = 196;
+		spDef = 196;
+		speed = 306;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
+	}
+
+}
+
+class Poliwhirl extends Pokemon {
+	public Poliwhirl() {
+		id = 61;
+		hp = maxHP = 334;
+		attack = 251;
+		defense = 251;
+		spAtk = 218;
+		spDef = 218;
+		speed = 306;
+		type1 = Type.WATER;
+		type2 = Type.WATER;
+	}
+
+}
+
+class Poliwrath extends Pokemon {
+	public Poliwrath() {
+		id = 62;
+		hp = maxHP = 384;
+		attack = 295;
+		defense = 317;
+		spAtk = 262;
+		spDef = 306;
+		speed = 262;
+		type1 = Type.WATER;
+		type2 = Type.FIGHT;
+	}
+
+}
+
+class Abra extends Pokemon {
+	public Abra() {
+		id = 63;
+		hp = maxHP = 254;
+		attack = 152;
+		defense = 141;
+		spAtk = 339;
+		spDef = 229;
+		speed = 306;
+		type1 = Type.PSYCHC;
+		type2 = Type.PSYCHC;
+	}
+
+}
+
+class Kadabra extends Pokemon {
+	public Kadabra() {
+		id = 64;
+		hp = maxHP = 284;
+		attack = 185;
+		defense = 174;
+		spAtk = 372;
+		spDef = 262;
+		speed = 339;
+		type1 = Type.PSYCHC;
+		type2 = Type.PSYCHC;
+	}
+
+}
+
+class Alakazam extends Pokemon {
+	public Alakazam() {
+		id = 65;
+		hp = maxHP = 314;
+		attack = 218;
+		defense = 207;
+		spAtk = 405;
+		spDef = 295;
+		speed = 372;
+		type1 = Type.PSYCHC;
+		type2 = Type.PSYCHC;
+	}
+
 }

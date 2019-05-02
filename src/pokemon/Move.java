@@ -70,12 +70,16 @@ public class Move {
 	
 	public int damage(Pokemon pkmn, Pokemon target) {
 		int dmg, rand;
+		double stab = 1;
 		Random r = new Random();
 		rand = r.nextInt(39) + 217;
+		if(type.equals(pkmn.type1) || type.equals(pkmn.type2)) {
+			stab = 1.5;
+		}
 		if (category.equals(Category.PHYSICAL)) {
-			dmg = (int) (((42.0 * getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target) * (double) rand / 255);
+			dmg = (int) (((42.0 * getPower() * pkmn.getAttack() / target.getDefense() / 50) + 2) * modifier(target) * stab * (double) rand / 255);
 		} else {
-			dmg = (int) (((42.0 * getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target) * (double) rand / 255);
+			dmg = (int) (((42.0 * getPower() * pkmn.getSpAtk() / target.getSpDef() / 50) + 2) * modifier(target) * stab * (double) rand / 255);
 		}
 		return dmg;
 	}
