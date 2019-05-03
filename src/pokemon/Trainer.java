@@ -373,11 +373,11 @@ public class Trainer {
 		case 1: // Potion
 			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 20);
 		case 2: // Super Potion
-			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 20);
+			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 50);
 		case 3: // Hyper Potion
-			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 20);
+			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 200);
 		case 4: // Max Potion
-			return Math.min((team.get(active).getMaxHP() - team.get(active).getHP()), 20);
+			return (team.get(active).getMaxHP() - team.get(active).getHP());
 		}
 		return -1;
 	}

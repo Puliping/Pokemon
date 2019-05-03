@@ -143,9 +143,9 @@ public class BattleRound extends Controller {
 		
 		public void action() {
 			if (num == 1) {
-				trnr1.shift(res1[1]);
+				trnr1.shift(res1[1]-1);
 			} else {
-				trnr2.shift(res2[1]);
+				trnr2.shift(res2[1]-1);
 			}
 		}
 		
