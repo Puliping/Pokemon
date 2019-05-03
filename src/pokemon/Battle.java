@@ -196,7 +196,7 @@ public class Battle {
 				ok = true;
 				break;
 			case 4:
-				System.out.println("Impossivel fugir da batalha!(Seu covarde)");
+				System.out.println("Impossivel fugir da batalha! (Seu covarde)");
 			}
 		}
 		return res;
