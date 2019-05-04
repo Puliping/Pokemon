@@ -98,15 +98,16 @@ public class Map {
 			}
 		}
 	}
-	public static void move(char[][][][] m_atual,int i, int j,int m,int n,char[][][][] map) {
+	public static String move_map(char[][][][] m_atual,int i, int j,int m,int n,char[][][][] map) {
 		int continua=0;
+		String move = " ";
 		while(continua==0) {
-			String move = scan.nextLine();
+			move = scan.nextLine();
 			continua = 0;
 			switch(move) {
 				case "u":
 					if(verifica(m_atual,i,j+1,m,n)) {
-						m_atual[m][n][i][j]=m_atual[m][n][i][j+1];
+						m_atual[m][n][i][j+1]=m_atual[m][n][i][j];
 						m_atual[m][n][i][j]=map[m][n][i][j];
 						continua=1;
 					}
@@ -114,7 +115,7 @@ public class Map {
 						break;
 				case "r":
 					if(verifica(m_atual,i+1,j,m,n)) {
-						m_atual[m][n][i][j]=m_atual[m][n][i+1][j];
+						m_atual[m][n][i+1][j]=m_atual[m][n][i][j];
 						m_atual[m][n][i][j]=map[m][n][i][j];
 						continua=1;
 					}
@@ -122,7 +123,7 @@ public class Map {
 						break;
 				case "l":
 					if(verifica(m_atual,i-1,j,m,n)) {
-						m_atual[m][n][i][j]=m_atual[m][n][i-1][j];
+						m_atual[m][n][i-1][j]=m_atual[m][n][i][j];
 						m_atual[m][n][i][j]=map[m][n][i][j];
 						continua=1;
 					}
@@ -130,7 +131,7 @@ public class Map {
 						break;
 				case "d":
 					if(verifica(m_atual,i,j-1,m,n)) {
-						m_atual[m][n][i][j]=m_atual[m][n][i][j-1];
+						m_atual[m][n][i][j-1]=m_atual[m][n][i][j];
 						m_atual[m][n][i][j]=map[m][n][i][j];
 						continua=1;
 					}
@@ -138,6 +139,7 @@ public class Map {
 						break;
 			}
 		}
+		return move;
 	}
 	public static boolean verifica(char[][][][] map,int i, int j,int m,int n) {
 		switch(map[m][n][i][j]) {
@@ -150,13 +152,13 @@ public class Map {
 		case 'd':
 			map[m][n][i][j]=map[m-1][n][i+2][j];
 		case 'p':
-			System.out.println("Nao é posivel ir por esse caminho escoha outra opcao");
+			System.out.println("Nao e posivel ir por esse caminho escoha outra opcao");
 			return false;
 	}
 		return true;
 	}
 	public static void main(String[] args) {
-		copia(m1,m_atual);
-		imprime(m1);
+		copia(m3,m_atual);
+		imprime(m_atual);
 	}
 }
