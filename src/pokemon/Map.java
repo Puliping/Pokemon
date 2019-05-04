@@ -90,75 +90,127 @@ public class Map {
 		}
 		System.out.println();
 	}
-	public static void copia(char[][] map,char[][] m_atual) {
+	public static void copia(char[][][][] map,char[][] m_atual,int m, int n) {
 		System.out.println();
 		for(int i=0;i<=4;i++) {
 			for(int j=0;j<=4;j++)  {
-				m_atual[i][j]=map[i][j];
+				m_atual[i][j]=map[m][n][i][j];
 			}
 		}
 	}
-	public static String move_map(char[][][][] m_atual,int i, int j,int m,int n,char[][][][] map) {
-		int continua=0;
+	public static String move_map() {
+		int continua=0,i=3,j=2,m=2,n=0;
 		String move = " ";
+		copia(mm,m_atual,m,n);
 		while(continua==0) {
+			imprime(m_atual);
+			System.out.println("Escolha a sua direcao: ");
 			move = scan.nextLine();
-			continua = 0;
 			switch(move) {
 				case "u":
-					if(verifica(m_atual,i,j+1,m,n)) {
-						m_atual[m][n][i][j+1]=m_atual[m][n][i][j];
-						m_atual[m][n][i][j]=map[m][n][i][j];
-						continua=1;
+					if(verifica(i+1,j,m,n)) {
+						if(m_atual[i+1][j]=='p') {
+							continua=0;
+							break;
+						}
+						else {
+							m_atual[3][j]='T';
+							m++;
+							i=3;
+							continua=0;
+						}
 					}
-					else
-						break;
+					else { 
+						m_atual[i+1][j]=m_atual[i][j];
+						m_atual[i][j]=mm[m][n][i][j];
+						i++;
+						continua=0;
+					}
 				case "r":
-					if(verifica(m_atual,i+1,j,m,n)) {
-						m_atual[m][n][i+1][j]=m_atual[m][n][i][j];
-						m_atual[m][n][i][j]=map[m][n][i][j];
-						continua=1;
+					if(verifica(i,j+1,m,n)) {
+						if(m_atual[i][j+1]=='p') {
+							continua=0;
+							break;
+						}
+						else {
+							m_atual[i][1]='T';
+							n++;
+							j=1;
+							continua=0;
+						}
 					}
-					else
-						break;
+					else {
+						m_atual[i][j+1]=m_atual[i][j];
+						m_atual[i][j]=mm[m][n][i][j];
+						j++;
+						continua=0;
+					}
 				case "l":
-					if(verifica(m_atual,i-1,j,m,n)) {
-						m_atual[m][n][i-1][j]=m_atual[m][n][i][j];
-						m_atual[m][n][i][j]=map[m][n][i][j];
+					if(verifica(i,j-1,m,n)) {
+						if(m_atual[i][j-1]=='p') {
+							continua=0;
+							break;
+						}
+						else {
+							m_atual[i][3]='T';
+							n--;
+							j=3;
+							continua=0;
+						}
+					}
+					else {
+						m_atual[i][j-1]=m_atual[i][j];
+						m_atual[i][j]=mm[m][n][i][j];
+						j--;
 						continua=1;
 					}
-					else
-						break;
 				case "d":
-					if(verifica(m_atual,i,j-1,m,n)) {
-						m_atual[m][n][i][j-1]=m_atual[m][n][i][j];
-						m_atual[m][n][i][j]=map[m][n][i][j];
-						continua=1;
+					if(verifica(i-1,j,m,n)) {
+						if(m_atual[i-1][j]=='p') {
+							continua=0;
+							break;
+						}
+						else {
+							m_atual[1][j]='T';
+							m--;
+							i=1;
+							continua=0;
+						}
 					}
-					else
-						break;
+					else {
+						m_atual[i-1][j]=m_atual[i][j];
+						m_atual[i][j]=mm[m][n][i][j];
+						i--;
+						continua=0;
+					}
+				case "s":
+					System.out.println("A aventura acabou!");
+					continua=1;
 			}
 		}
 		return move;
 	}
-	public static boolean verifica(char[][][][] map,int i, int j,int m,int n) {
-		switch(map[m][n][i][j]) {
+	public static boolean verifica(int i, int j,int m,int n) {
+		switch(m_atual[i][j]) {
 		case 'u':
-			map[m][n][i][j]=map[m+1][n][i-2][j];
+			copia(mm,m_atual,m+1,n);
+			return true;
 		case 'r':
-			map[m][n][i][j]=map[m][n+1][i][j-2];
+			copia(mm,m_atual,m,n+1);
+			return true;
 		case 'l':
-			map[m][n][i][j]=map[m][n-1][i][j+2];
+			copia(mm,m_atual,m,n-1);
+			return true;
 		case 'd':
-			map[m][n][i][j]=map[m-1][n][i+2][j];
+			copia(mm,m_atual,m-1,n);
+			return true;
 		case 'p':
 			System.out.println("Nao e posivel ir por esse caminho escoha outra opcao");
-			return false;
+			return true;
 	}
-		return true;
+		return false;
 	}
 	public static void main(String[] args) {
-		copia(m3,m_atual);
-		imprime(m_atual);
+		move_map();
 	}
 }
