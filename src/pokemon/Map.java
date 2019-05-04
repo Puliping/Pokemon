@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Map {
 	static Scanner scan = new Scanner(System.in);
-	// @formatter:off
 	static final char[][] m_atual = { 
 			{' ',' ',' ',' ',' '},
 			{' ',' ',' ',' ',' '},			
@@ -80,87 +79,86 @@ public class Map {
 			{m4,m5,m6},
 			{m1,m2,m3}
 	};
-	// @formatter:on
 	public static void imprime(char[][] map) {
 		System.out.println();
-		for (int i = 1; i <= 3; i++) {
+		for(int i=1;i<=3;i++) {
 			System.out.print("        |");
-			for (int j = 1; j <= 3; j++) {
-				System.out.print(map[i][j] + "|");
+			for(int j=1;j<=3;j++)  {
+				System.out.print(map[i][j]+"|");
 			}
 			System.out.println();
 		}
 		System.out.println();
 	}
-	
-	public static void copia(char[][] map, char[][] m_atual) {
+	public static void copia(char[][] map,char[][] m_atual) {
 		System.out.println();
-		for (int i = 0; i <= 4; i++) {
-			for (int j = 0; j <= 4; j++) {
-				m_atual[i][j] = map[i][j];
+		for(int i=0;i<=4;i++) {
+			for(int j=0;j<=4;j++)  {
+				m_atual[i][j]=map[i][j];
 			}
 		}
 	}
-	
-	public static String move_map(char[][][][] m_atual, int i, int j, int m, int n, char[][][][] map) {
-		int continua = 0;
+	public static String move_map(char[][][][] m_atual,int i, int j,int m,int n,char[][][][] map) {
+		int continua=0;
 		String move = " ";
-		while (continua == 0) {
+		while(continua==0) {
 			move = scan.nextLine();
 			continua = 0;
-			switch (move) {
-			case "u":
-				if (verifica(m_atual, i, j + 1, m, n)) {
-					m_atual[m][n][i][j + 1] = m_atual[m][n][i][j];
-					m_atual[m][n][i][j] = map[m][n][i][j];
-					continua = 1;
-				} else
-					break;
-			case "r":
-				if (verifica(m_atual, i + 1, j, m, n)) {
-					m_atual[m][n][i + 1][j] = m_atual[m][n][i][j];
-					m_atual[m][n][i][j] = map[m][n][i][j];
-					continua = 1;
-				} else
-					break;
-			case "l":
-				if (verifica(m_atual, i - 1, j, m, n)) {
-					m_atual[m][n][i - 1][j] = m_atual[m][n][i][j];
-					m_atual[m][n][i][j] = map[m][n][i][j];
-					continua = 1;
-				} else
-					break;
-			case "d":
-				if (verifica(m_atual, i, j - 1, m, n)) {
-					m_atual[m][n][i][j - 1] = m_atual[m][n][i][j];
-					m_atual[m][n][i][j] = map[m][n][i][j];
-					continua = 1;
-				} else
-					break;
+			switch(move) {
+				case "u":
+					if(verifica(m_atual,i,j+1,m,n)) {
+						m_atual[m][n][i][j+1]=m_atual[m][n][i][j];
+						m_atual[m][n][i][j]=map[m][n][i][j];
+						continua=1;
+					}
+					else
+						break;
+				case "r":
+					if(verifica(m_atual,i+1,j,m,n)) {
+						m_atual[m][n][i+1][j]=m_atual[m][n][i][j];
+						m_atual[m][n][i][j]=map[m][n][i][j];
+						continua=1;
+					}
+					else
+						break;
+				case "l":
+					if(verifica(m_atual,i-1,j,m,n)) {
+						m_atual[m][n][i-1][j]=m_atual[m][n][i][j];
+						m_atual[m][n][i][j]=map[m][n][i][j];
+						continua=1;
+					}
+					else
+						break;
+				case "d":
+					if(verifica(m_atual,i,j-1,m,n)) {
+						m_atual[m][n][i][j-1]=m_atual[m][n][i][j];
+						m_atual[m][n][i][j]=map[m][n][i][j];
+						continua=1;
+					}
+					else
+						break;
 			}
 		}
 		return move;
 	}
-	
-	public static boolean verifica(char[][][][] map, int i, int j, int m, int n) {
-		switch (map[m][n][i][j]) {
+	public static boolean verifica(char[][][][] map,int i, int j,int m,int n) {
+		switch(map[m][n][i][j]) {
 		case 'u':
-			map[m][n][i][j] = map[m + 1][n][i - 2][j];
+			map[m][n][i][j]=map[m+1][n][i-2][j];
 		case 'r':
-			map[m][n][i][j] = map[m][n + 1][i][j - 2];
+			map[m][n][i][j]=map[m][n+1][i][j-2];
 		case 'l':
-			map[m][n][i][j] = map[m][n - 1][i][j + 2];
+			map[m][n][i][j]=map[m][n-1][i][j+2];
 		case 'd':
-			map[m][n][i][j] = map[m - 1][n][i + 2][j];
+			map[m][n][i][j]=map[m-1][n][i+2][j];
 		case 'p':
 			System.out.println("Nao e posivel ir por esse caminho escoha outra opcao");
 			return false;
-		}
+	}
 		return true;
 	}
-	
 	public static void main(String[] args) {
-		copia(m3, m_atual);
+		copia(m3,m_atual);
 		imprime(m_atual);
 	}
 }
