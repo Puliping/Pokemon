@@ -115,6 +115,7 @@ class Quick_Attack extends Move {
 	}
 	
 }
+
 class Psybeam extends Move {
 	public Psybeam() {
 		power = 65;
@@ -123,6 +124,7 @@ class Psybeam extends Move {
 	}
 	
 }
+
 class Sludge extends Move {
 	public Sludge() {
 		power = 65;
@@ -131,6 +133,7 @@ class Sludge extends Move {
 	}
 	
 }
+
 class Earthquake extends Move {
 	public Earthquake() {
 		power = 100;
@@ -139,6 +142,7 @@ class Earthquake extends Move {
 	}
 	
 }
+
 class Rock_Slide extends Move {
 	public Rock_Slide() {
 		power = 75;
@@ -147,6 +151,7 @@ class Rock_Slide extends Move {
 	}
 	
 }
+
 class Leech_Life extends Move {
 	public Leech_Life() {
 		power = 80;
@@ -155,6 +160,7 @@ class Leech_Life extends Move {
 	}
 	
 }
+
 class Lick extends Move {
 	public Lick() {
 		power = 60;
@@ -163,6 +169,7 @@ class Lick extends Move {
 	}
 	
 }
+
 class Dragon_Rage extends Move {
 	public Dragon_Rage() {
 		power = 50;

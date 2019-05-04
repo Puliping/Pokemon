@@ -81,7 +81,7 @@ public class Battle {
 	
 	private static void faint(Trainer trnr) {
 		trnr.removeFromTeam(trnr.getActive());
-		if(trnr.getTeam().size() <= 0)
+		if (trnr.getTeam().size() <= 0)
 			return;
 		for (boolean ok = false; !ok;) {
 			printPokemon(trnr);
