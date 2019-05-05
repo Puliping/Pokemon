@@ -79,6 +79,16 @@ public class Map {
 			{m4,m5,m6},
 			{m1,m2,m3}
 	};
+	public static boolean wildpkmn(char[][][][] map,int i , int j,int m,int n) {
+		if(map[m][n][i][j]=='*') {
+			if(Math.random()>=0.8) {
+				System.out.println("Um pokemon selvagem apareceu");
+				return true;
+			}
+			return false;
+		}
+		return false;
+	}
 	public static void imprime(char[][] map) {
 		System.out.println();
 		for(int i=1;i<=3;i++) {
@@ -105,6 +115,7 @@ public class Map {
 		map[i][j]='T';
 		while(continua==0) {
 			imprime(map);
+			wildpkmn(mm,i ,j,m,n);
 			System.out.println("Escolha a sua direcao: ");
 			move = scan.nextLine();
 			switch(move) {
