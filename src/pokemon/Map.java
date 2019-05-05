@@ -111,7 +111,6 @@ public class Map {
 				case "u":
 					if(verifica(i-1,j,m,n)) {
 						if(mm[m][n][i-1][j]=='p') {
-							System.out.println("entrou p ");
 							continua=0;
 						}
 						else {
@@ -131,7 +130,6 @@ public class Map {
 				case "r":
 					if(verifica(i,j+1,m,n)) {
 						if(mm[m][n][i][j+1]=='p') {
-							System.out.println("entrou p ");
 							continua=0;
 						}
 						else {
@@ -151,7 +149,6 @@ public class Map {
 				case "l":
 					if(verifica(i,j-1,m,n)) {
 						if(mm[m][n][i][j-1]=='p') {
-							System.out.println("entrou p ");
 							continua=0;
 						}
 						else {
@@ -171,7 +168,6 @@ public class Map {
 				case "d":
 					if(verifica(i+1,j,m,n)) {
 						if(mm[m][n][i+1][j]=='p') {
-							System.out.println("entrou p ");
 							continua=0;
 						}
 						else {
