@@ -24,6 +24,7 @@ public class BattleRound extends Controller {
 		public void action() {
 			if (num == 1 && trnr1.getTeam(trnr1.getActive()).getHP() > 0) {
 				dmg = trnr2.takeDamage(res1[2]);
+				Wild.c = 0;
 			} else if (trnr2.getTeam(trnr2.getActive()).getHP() > 0) {
 				dmg = trnr1.takeDamage(res2[2]);
 			}

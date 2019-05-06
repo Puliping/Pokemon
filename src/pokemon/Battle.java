@@ -54,12 +54,9 @@ public class Battle {
 			res1 = turnChoice(trnr1, trnr2);
 			System.out.println("<< " + trnr2 + " >>");
 			res2 = turnChoice(trnr2, trnr1);
-			
-			// Controller?
 			System.out.println("Resolvendo turno...");
 			BattleRound be = new BattleRound(trnr1, res1, trnr2, res2);
 			be.run();
-			// Controller?
 			if (trnr1.getTeam(trnr1.getActive()).getHP() <= 0)
 				faint(trnr1);
 			if (trnr2.getTeam(trnr2.getActive()).getHP() <= 0 && trnr2.getTeam().size() != 0)
@@ -102,7 +99,7 @@ public class Battle {
 		
 	}
 	
-	private static void printAction() {
+	static void printAction() {
 		System.out.println("Escolha sua acao");
 		System.out.println("[1] Lutar");
 		System.out.println("[2] Itens");
@@ -110,7 +107,7 @@ public class Battle {
 		System.out.println("[4] Fugir");
 	}
 	
-	private static void printFight(Trainer trnr) {
+	static void printFight(Trainer trnr) {
 		System.out.println("Escolha o ataque");
 		System.out.println("[1] " + trnr.getMove(1));
 		System.out.println("[2] " + trnr.getMove(2));
@@ -118,7 +115,7 @@ public class Battle {
 		System.out.println("[4] " + trnr.getMove(4));
 	}
 	
-	private static void printBag() {
+	static void printBag() {
 		System.out.println("Escolha o item");
 		System.out.println("[1] Potion");
 		System.out.println("[2] Super Potion");
@@ -126,7 +123,7 @@ public class Battle {
 		System.out.println("[4] Max Potion");
 	}
 	
-	private static void printPokemon(Trainer trnr) {
+	static void printPokemon(Trainer trnr) {
 		System.out.println("Escolha o Pokemon para substituir");
 		for (int j = 0; j < trnr.getTeam().size(); j++) {
 			System.out.print("[" + (j + 1) + "] " + trnr.getTeam(j));
