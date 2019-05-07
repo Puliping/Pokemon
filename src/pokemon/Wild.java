@@ -243,7 +243,7 @@ public class Wild {
 			trnr.addToTeam(starter.getTeam(choice - 1).id);
 			System.out.println("Certo! Voce escolheu " + trnr.getTeam(0).toString().toUpperCase() + ".");
 			TimeUnit.SECONDS.sleep(2);
-			System.out.println("Lembre-se! POKeMONs podem te atacar na grama alta (*), mas nao na estrada (.)");
+			System.out.println("Lembre-se! POKeMONs podem te atacar na grama alta (*), mas nao na estrada ( )");
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println("Use suas POKeBALLs para captura-los! Quanto mais dano tiverem tomado, mais facil sera.");
 			TimeUnit.SECONDS.sleep(2);
