@@ -122,7 +122,7 @@ public class Map {
 		String move;
 		copia(mm, map, m, n);
 		map[i][j] = 'T';
-		System.out.println("W = cima; A = esquerda; S = baixo; D = direita.");
+		System.out.println("W = cima; A = esquerda; S = baixo; D = direita; EXIT para sair.");
 		while (continua == 0) {
 			wildpkmn(mm[m][n][i][j], trnr);
 			imprime(map);
@@ -197,6 +197,10 @@ public class Map {
 					continua = 0;
 				}
 				break;
+			case "exit":
+				System.out.println("Finalizando o jogo...");
+				System.gc();
+				return;
 			}
 		}
 	}
