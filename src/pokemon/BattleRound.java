@@ -89,6 +89,7 @@ public class BattleRound extends Controller {
 		public void action() {
 			if (num == 1) {
 				trnr1.getTeam(trnr1.getActive()).heal(res1[2]);
+				trnr1.potQty[res1[1] - 1]--;
 			} else {
 				trnr2.getTeam(trnr2.getActive()).heal(res2[2]);
 			}
@@ -162,14 +163,79 @@ public class BattleRound extends Controller {
 		
 	}
 	
+	class CatchEvent extends Event {
+		public CatchEvent(long eventTime) {
+			super(eventTime);
+		}
+		
+		public void action() {
+		
+		}
+		
+		public String description() {
+			String str = "";
+			if (res1[2] == 1) {
+				str += "O " + trnr2.getTeam(trnr2.getActive()) + " selvagem foi capturado!\n";
+				if (trnr1.getTeam().size() < 6) {
+					str += "E foi adicionado ao time!";
+					trnr1.addToTeam(trnr2.getTeam(trnr2.getActive()));
+				} else {
+					str += "E foi enviado ao banco!";
+				}
+				trnr2.getTeam(trnr2.getActive()).hp = 0;
+			} else {
+				str += "O " + trnr2.getTeam(trnr2.getActive()) + " selvagem escapou!";
+			}
+			return str;
+		}
+	}
+	
+	class FleeEvent extends Event {
+		int num;
+		
+		public FleeEvent(long eventTime, int num) {
+			super(eventTime);
+			this.num = num;
+		}
+		
+		public void action() {
+			
+		}
+		
+		public String description() {
+			String str = "";
+			if (num == 1) {
+				if (res1[1] == 1) {
+					str += trnr1 + " fugiu com segurança!";
+					trnr2.getTeam(0).hp = 0;
+				} else {
+					str += "Nao foi possivel fugir!";
+				}
+			} else {
+				str += "O POKeMON selvagem fugiu!";
+			}
+			return str;
+		}
+		
+	}
+	
 	@Override
 	public void run() {
 		long tm = System.currentTimeMillis();
-		int mod1 = trnr1.getTeam(trnr1.getActive()).getSpeed() + trnr1.getMove(res1[1]).getPriority() * 500;
-		int mod2 = trnr2.getTeam(trnr2.getActive()).getSpeed() + trnr2.getMove(res2[1]).getPriority() * 500;
+		int mod1 = 0, mod2 = 0;
+		if (res1[0] == 1)
+			mod1 = trnr1.getTeam(trnr1.getActive()).getSpeed() + trnr1.getMove(res1[1]).getPriority() * 500;
+		if (res2[0] == 1)
+			mod2 = trnr2.getTeam(trnr2.getActive()).getSpeed() + trnr2.getMove(res2[1]).getPriority() * 500;
 		switch (res1[0]) {
+		case 4:
+			addEvent(new FleeEvent(tm, 1));
+			break;
+		case 5:
+			addEvent(new CatchEvent(tm + 100));
+			break;
 		case 3:
-			addEvent(new ShiftEvent(tm, 1));
+			addEvent(new ShiftEvent(tm + 250, 1));
 			break;
 		case 2:
 			addEvent(new BagEvent(tm + 500, 1));
@@ -179,8 +245,11 @@ public class BattleRound extends Controller {
 			break;
 		}
 		switch (res2[0]) {
+		case 4:
+			addEvent(new FleeEvent(tm, 2));
+			break;
 		case 3:
-			addEvent(new ShiftEvent(tm, 2));
+			addEvent(new ShiftEvent(tm + 250, 2));
 			break;
 		case 2:
 			addEvent(new BagEvent(tm + 500, 2));

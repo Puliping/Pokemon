@@ -57,7 +57,7 @@ public class Battle {
 			System.out.println("Resolvendo turno...");
 			BattleRound be = new BattleRound(trnr1, res1, trnr2, res2);
 			be.run();
-			if (trnr1.getTeam(trnr1.getActive()).getHP() <= 0)
+			if (trnr1.getTeam(trnr1.getActive()).getHP() <= 0 && trnr1.getTeam().size() != 0)
 				faint(trnr1);
 			if (trnr2.getTeam(trnr2.getActive()).getHP() <= 0 && trnr2.getTeam().size() != 0)
 				faint(trnr2);
@@ -76,7 +76,7 @@ public class Battle {
 		return str;
 	}
 	
-	private static void faint(Trainer trnr) {
+	static void faint(Trainer trnr) {
 		trnr.removeFromTeam(trnr.getActive());
 		if (trnr.getTeam().size() <= 0)
 			return;

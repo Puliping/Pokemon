@@ -6,6 +6,8 @@ public class Trainer {
 	protected int active;
 	protected String name;
 	protected LinkedList<Pokemon> team = new LinkedList<Pokemon>();
+	int[] potQty = { 5, 3, 2, 1 }; // Potion, Super, Hyper, Max
+	int[] ballQty = { 4, 3, 1, 0 }; // Pokeball, Great, Ultra, Master
 	
 	public Trainer(String name, int... ids) {
 		this.name = name;
@@ -299,6 +301,10 @@ public class Trainer {
 			if (team.size() == 6)
 				break;
 		}
+	}
+	
+	public void addToTeam(Pokemon pkmn) {
+		team.add(pkmn);
 	}
 	
 	public void removeFromTeam(int num) {

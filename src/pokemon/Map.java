@@ -1,9 +1,12 @@
 package pokemon;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Map {
 	static Scanner scan = new Scanner(System.in);
+	static Random rand = new Random();
+	
 	// @formatter:off
 	static char[][] m_atual = {
 			{' ',' ',' ',' ',' '},
@@ -21,58 +24,58 @@ public class Map {
 			};
 	static final char[][] m2 = { 
 			{'p','u','u','u','p'},
-			{'l','*',' ','*','r'},
-			{'l',' ',' ',' ','r'},
+			{'l','*','.','*','r'},
+			{'l','.','.','.','r'},
 			{'l','*','*','*','r'},
 			{'p','p','p','p','p'}
 			};
 	static final char[][] m3 = { 
 		    {'p','u','u','u','p'},
-			{'l','*','*',' ','p'},
-			{'l',' ',' ',' ','p'},
+			{'l','*','*','.','p'},
+			{'l','.','.','.','p'},
 			{'l','*','*','*','p'},
 			{'p','p','p','p','p'}
 			};
 	static final char[][] m4 = { 
 			{'p','u','u','u','p'},
 			{'p','*','*','*','r'},
-			{'p','*',' ',' ','r'},
-			{'p','*',' ','*','r'},
-			{'d','d','d','d','p'}
+			{'p','*','.','.','r'},
+			{'p','*','.','*','r'},
+			{'p','d','d','d','p'}
 			};
 	static final char[][] m5 = { 
 			{'p','u','u','u','p'},
 			{'l','*','*','*','r'},
-			{'l',' ',' ','*','r'},
-			{'l','*',' ','*','r'},
+			{'l','.','.','*','r'},
+			{'l','*','.','*','r'},
 			{'p','d','d','d','p'}
 			};
 	static final char[][] m6 = { 
 			{'p','u','u','u','p'},
-			{'l','*',' ','*','p'},
-			{'l',' ',' ',' ','p'},
-			{'l',' ','*',' ','p'},
+			{'l','*','.','*','p'},
+			{'l','.','.','.','p'},
+			{'l','.','*','.','p'},
 			{'p','d','d','d','p'}
 			};
 	static final char[][] m7 = { 
 			{'p','p','p','p','p'},
 			{'p','*','*','*','r'},
-			{'p','*','g','*','r'},
+			{'p','*','.','*','r'},
 			{'p','*','*','*','r'},
 			{'p','d','d','d','p'}
 			};
 	static final char[][] m8 = { 
 			{'p','p','p','p','p'},
 			{'l','*','*','*','r'},
-			{'l','*','i',' ','r'},
+			{'l','*','.','.','r'},
 			{'l','*','*','*','r'},
 			{'p','d','d','d','p'}
 			};
 	static final char[][] m9 = { 
 			{'p','p','p','p','p'},
 			{'l','*','*','*','p'},
-			{'l',' ',' ','*','p'},
-			{'l','*',' ','*','p'},
+			{'l','.','.','*','p'},
+			{'l','*','.','*','p'},
 			{'p','d','d','d','p'}
 			};
 	static final char[][][][] mm = {
@@ -81,15 +84,17 @@ public class Map {
 			{m1,m2,m3}
 			};
 	// @formatter:on
-	public static boolean wildpkmn(char[][][][] map, int i, int j, int m, int n) {
-		if (map[m][n][i][j] == '*') {
-			if (Math.random() >= 0.8) {
-				System.out.println("Um pokemon selvagem apareceu");
-				return true;
+	
+	public static void wildpkmn(char c, Trainer trnr) {
+		if (c == '*') {
+			if (rand.nextInt(256) > 200) {
+				int id = rand.nextInt(Wild.MAXPKMN);
+				Trainer wild = new Trainer("POKeMON selvagem");
+				wild.addToTeam(id);
+				System.out.println("Um POKeMON selvagem apareceu!");
+				Wild.battle(trnr, wild);
 			}
-			return false;
 		}
-		return false;
 	}
 	
 	public static void imprime(char[][] map) {
@@ -105,7 +110,6 @@ public class Map {
 	}
 	
 	public static void copia(char[][][][] map, char[][] m_atual, int m, int n) {
-		System.out.println();
 		for (int i = 0; i <= 4; i++) {
 			for (int j = 0; j <= 4; j++) {
 				m_atual[i][j] = map[m][n][i][j];
@@ -113,18 +117,19 @@ public class Map {
 		}
 	}
 	
-	public static String move_map(char[][] map) {
+	public static void move_map(char[][] map, Trainer trnr) {
 		int continua = 0, i = 3, j = 2, m = 2, n = 0;
-		String move = " ";
+		String move;
 		copia(mm, map, m, n);
 		map[i][j] = 'T';
+		System.out.println("W = cima; A = esquerda; S = baixo; D = direita.");
 		while (continua == 0) {
+			wildpkmn(mm[m][n][i][j], trnr);
 			imprime(map);
-			wildpkmn(mm, i, j, m, n);
 			System.out.println("Escolha a sua direcao: ");
-			move = scan.nextLine();
+			move = scan.nextLine().toLowerCase();
 			switch (move) {
-			case "u":
+			case "w":
 				if (verifica(i - 1, j, m, n)) {
 					if (mm[m][n][i - 1][j] == 'p') {
 						continua = 0;
@@ -141,7 +146,7 @@ public class Map {
 					continua = 0;
 				}
 				break;
-			case "r":
+			case "d":
 				if (verifica(i, j + 1, m, n)) {
 					if (mm[m][n][i][j + 1] == 'p') {
 						continua = 0;
@@ -158,7 +163,7 @@ public class Map {
 					continua = 0;
 				}
 				break;
-			case "l":
+			case "a":
 				if (verifica(i, j - 1, m, n)) {
 					if (mm[m][n][i][j - 1] == 'p') {
 						continua = 0;
@@ -175,7 +180,7 @@ public class Map {
 					continua = 0;
 				}
 				break;
-			case "d":
+			case "s":
 				if (verifica(i + 1, j, m, n)) {
 					if (mm[m][n][i + 1][j] == 'p') {
 						continua = 0;
@@ -194,7 +199,6 @@ public class Map {
 				break;
 			}
 		}
-		return move;
 	}
 	
 	public static boolean verifica(int i, int j, int m, int n) {
@@ -212,13 +216,14 @@ public class Map {
 			copia(mm, m_atual, m + 1, n);
 			return true;
 		case 'p':
-			System.out.println("Nao e posivel ir por esse caminho escolha outra opcao");
+			System.out.println("Nao e posivel ir por esse caminho...");
 			return true;
 		}
 		return false;
 	}
 	
 	public static void main(String[] args) {
-		move_map(m_atual);
+		Trainer trnr = new Trainer("Gabriel", 3);
+		move_map(m_atual, trnr);
 	}
 }
