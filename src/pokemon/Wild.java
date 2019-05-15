@@ -58,7 +58,7 @@ public class Wild {
 			be.run();
 			
 			if (trnr.getTeam(trnr.getActive()).getHP() <= 0 && trnr.getTeam().size() != 0)
-				Battle.faint(trnr);
+				Versus.faint(trnr);
 			if(wild.getTeam(0).hp <= 0) {
 				wild.removeFromTeam(0);
 				break;

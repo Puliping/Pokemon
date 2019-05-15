@@ -2,7 +2,7 @@ package pokemon;
 
 import java.util.Scanner;
 
-public class Battle {
+public class Versus {
 	static Scanner scan = new Scanner(System.in);
 	
 	public static Trainer setTrainer(int num) {
