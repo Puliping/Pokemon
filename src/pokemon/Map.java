@@ -85,12 +85,65 @@ public class Map {
 			};
 	// @formatter:on
 	
+	static String getAttackName(int n) {
+		switch (n) {
+		case 1:
+			return "Pound";
+		case 2:
+			return "Karate Chop";
+		case 3:
+			return "Mega Punch";
+		case 4:
+			return "Fire Punch";
+		case 5:
+			return "Ice Punch";
+		case 6:
+			return "Thunder Punch";
+		case 7:
+			return "Razor Wind";
+		case 8:
+			return "Gust";
+		case 9:
+			return "Wing Attack";
+		case 10:
+			return "Vine Whip";
+		case 11:
+			return "Flamethrower";
+		case 12:
+			return "Hydro Pump";
+		case 13:
+			return "Surf";
+		case 14:
+			return "Quick Attack";
+		case 15:
+			return "Psybeam";
+		case 16:
+			return "Sludge";
+		case 17:
+			return "Earthquake";
+		case 18:
+			return "Rock Slide";
+		case 19:
+			return "Leech Life";
+		case 20:
+			return "Lick";
+		case 21:
+			return "Dragon Rage";
+		default:
+			return "Pound";
+		}
+	}
+	
 	public static void wildpkmn(char c, Trainer trnr) {
 		if (c == '*') {
 			if (rand.nextInt(256) > 200) {
 				int id = rand.nextInt(Wild.MAXPKMN);
 				Trainer wild = new Trainer("POKeMON selvagem");
 				wild.addToTeam(id);
+				for (int i = 1; i <= 4; i++) {
+					String move = getAttackName(rand.nextInt(21) + 1);
+					wild.setMove(0, i, move);
+				}
 				System.out.println("Um POKeMON selvagem apareceu!");
 				Wild.battle(trnr, wild);
 			}
@@ -227,7 +280,7 @@ public class Map {
 	}
 	
 	public static void main(String[] args) {
-		Trainer trnr = new Trainer("Gabriel", 3);
+		Trainer trnr = new Trainer("Gabriel", 1);
 		move_map(m_atual, trnr);
 	}
 }

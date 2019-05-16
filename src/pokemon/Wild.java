@@ -263,7 +263,7 @@ public class Wild {
 			System.out.println("[2] " + starter.getTeam(1));
 			System.out.println("[3] " + starter.getTeam(2));
 			int choice;
-			for (;;)
+			for (;;) {
 				try {
 					choice = Integer.parseInt(scan.nextLine());
 					if (choice < 1 || choice > 3) {
@@ -274,13 +274,25 @@ public class Wild {
 				} catch (NumberFormatException e) {
 					System.out.println("Escolha invalida...");
 				}
+			}
 			trnr.addToTeam(starter.getTeam(choice - 1).id);
 			System.out.println("Certo! Voce escolheu " + trnr.getTeam(0).toString().toUpperCase() + ".");
 			TimeUnit.SECONDS.sleep(2);
+			System.out.println("Escolha os ataques do seu POKeMON!");
+			TimeUnit.SECONDS.sleep(1);
+			String move;
+			for(int i = 1; i <= 4; i++) {
+				System.out.print(i);
+				move = scan.nextLine();
+				trnr.setMove(0, i, move);
+			}
 			System.out.println("Lembre-se! POKeMONs podem te atacar na grama alta [*], mas nao na estrada [.]");
 			TimeUnit.SECONDS.sleep(2);
-			System.out
-					.println("Use suas POKeBALLs para captura-los! Quanto mais dano tiverem tomado, mais facil sera.");
+			System.out.println("É possível mudar de mapa, mas apenas em algumas direções!");
+			TimeUnit.SECONDS.sleep(2);
+			System.out.println("Use suas POKeBALLs para captura-los!");
+			TimeUnit.SECONDS.sleep(2);
+			System.out.println("Quanto mais dano tiverem tomado, mais facil sera.");
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println("Prepare-se para iniciar sua aventura!");
 			TimeUnit.SECONDS.sleep(2);
