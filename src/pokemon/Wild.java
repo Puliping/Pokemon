@@ -282,7 +282,7 @@ public class Wild {
 			TimeUnit.SECONDS.sleep(1);
 			String move;
 			for(int i = 1; i <= 4; i++) {
-				System.out.print(i);
+				System.out.print(i + ". ");
 				move = scan.nextLine();
 				trnr.setMove(0, i, move);
 			}
@@ -296,7 +296,7 @@ public class Wild {
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println("Prepare-se para iniciar sua aventura!");
 			TimeUnit.SECONDS.sleep(2);
-			
+			System.out.println();
 			// Chamada para o Mapa
 			Map.move_map(Map.m_atual, trnr);
 		} catch (Exception e) {
